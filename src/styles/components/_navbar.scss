@@ -1,0 +1,9 @@
+.navbar-container {
+    position: fixed;
+    z-index: 99;
+}
+
+.navbar-container nav img {
+    width: 2rem;
+    filter: contrast(1%);
+}

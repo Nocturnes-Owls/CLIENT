@@ -1,0 +1,46 @@
+.header-content{
+    background-image: url('/header-background-a.jpg');
+    background-size: cover;
+    height: 40rem;
+    position: relative;
+    clip-path: polygon(100% 0, 145% 63%, 77% 89%, 0 83%, 0 0);
+}
+
+.header-content::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: $primary-color;    
+    opacity: 73%;
+}
+
+.header-content video {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.image-header {
+    position: absolute;
+    max-width: 20rem;
+    bottom: 4.3rem;
+    right: 0;
+}
+
+.gradient {
+    background-color: red;
+}
+
+.header-text {
+    position: absolute;
+    margin-left: 2rem;
+    top: 8rem;
+}
+
+// @include mx-response(md){
+//     .image-header {
+//         top: 13rem;
+//         right: 2rem;
+//     }
+// }
