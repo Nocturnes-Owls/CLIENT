@@ -1,0 +1,37 @@
+//Media Queries
+/*
+  phone --->  (0 - 767px)
+  tablet -->  ( 768px - 991px)
+  desktop -->  ( 992px - 1200px)
+  large desktop -->  ( 1200px - +)
+*/
+
+@mixin mx-response($breakpoint){
+    @if $breakpoint == sm {
+        @media screen and (min-width: 640px){
+            @content;
+        }
+    }
+    @if $breakpoint == md {
+        @media screen and (min-width: 768px){
+            @content;
+        }
+    }
+    @if $breakpoint == lg {
+        @media screen and (min-width: 992px){
+            @content;
+        }
+    }
+    @if $breakpoint == xl {
+        @media screen and (min-width: 1200px){
+            @content;
+        }
+    }
+}
+
+@mixin mx-flex($justify: center, $align: center, $direction: row){
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+}
