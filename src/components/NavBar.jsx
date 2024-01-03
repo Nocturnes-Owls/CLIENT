@@ -18,7 +18,7 @@ const NavBar = () => {
     <div className={`${navEffect && "navbar-container-blur"} navbar-container`}>
       <nav>
         <span>
-          <h2>LOGO</h2>
+          <img className="navbar-logo" src="/logo.webp" alt="owl head logo" />
         </span>
         <menu>III</menu>
       </nav>

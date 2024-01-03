@@ -4,6 +4,15 @@ const Header = ({ title, text }) => {
   return (
     <div>
       <header className="header-content">
+        <video
+          src="/backgroundheader.mp4"
+          autoPlay
+          loop
+          muted
+        ></video>
+
+        <div className="video-filter"></div>
+
         <div className="header-text">
           <h1>{title}</h1>
           <h2>{text}</h2>
