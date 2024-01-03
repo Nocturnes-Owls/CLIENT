@@ -28,10 +28,13 @@ const Home = () => {
       />
 
 
-      <CommunityJoin />
+      <CommunityJoin 
+        title="Comunidad"
+        description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus adipisci veritatis quasi ex. Dicta optio consectetur aliquid modi, obcaecati fugiat accusamus aspernatur perferendis vero enim molestias numquam iste maxime quasi?"
+        image="./comunity.webp"
+      />
       <Tournament />
       <Contact />
-      <Button />
     </div>
   );
 };

@@ -1,0 +1,19 @@
+.comunity{
+    .container{
+        @include mx-flex($justify: space-between, $direction: column);
+    }
+    .description{
+        max-width: 30rem;
+    }
+    .btnPrimary{
+        margin-top: 2rem;
+    }
+}
+
+@include mx-response(lg){
+    .comunity{
+        .container{
+            flex-direction: row;
+        }
+    }
+}
