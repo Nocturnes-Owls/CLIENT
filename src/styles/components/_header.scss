@@ -7,6 +7,10 @@
 
 .header-content video {
   object-fit: cover;
+  position: absolute;
+  height: 210%;
+  width: 100%;
+  filter: brightness(0.7) contrast(3) saturate(4) opacity(.8);
 }
 
 .video-filter {
@@ -29,19 +33,13 @@
   backdrop-filter: blur(1.5px);
 }
 
-.header-content video {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-}
-
 .image-header {
   position: absolute;
   max-width: 20rem;
   bottom: 1.3rem;
   right: 0;
   z-index: 1;
-  filter: brightness(0.9), saturate(1);
+  filter: brightness(0.9);
 }
 
 .gradient {
