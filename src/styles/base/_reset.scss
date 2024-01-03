@@ -1,19 +1,45 @@
-*, *::after, *::before{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    list-style: none;
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
 }
 
-*:focus{
-    outline: none;
+*:focus {
+  outline: none;
 }
 
-img{
-    width: 100%;
+body{
+  background: $secondary-color
 }
 
-body {
-    background-color: $secondary-color;
+img {
+  width: 100%;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+@include mx-response(md) {
+}
+
+@include mx-response(lg) {
+  h1 {
+    font-size: 3.5rem;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+  }
+}
+
+@include mx-response(xl) {
 }

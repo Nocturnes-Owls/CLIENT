@@ -1,9 +1,56 @@
 .navbar-container {
-    position: fixed;
-    z-index: 99;
+  position: fixed;
+  width: 100%;
+  color: white;
+  z-index: 99;
+}
+
+.navbar-container {
+  animation: blur linear both;
+  animation-timeline: scroll();
+  animation-range: 0 400px;
+}
+
+@keyframes blur {
+  to {
+    box-shadow: 0px 5px 50px -5px hsla(0, 0%, 100%, 0.1), 0px 0px 0 1px hsla(0, 0%, 100%, 0.1);
+    background: rgba(0, 0, 0, .3);
+    backdrop-filter: blur(10px);
+  }
+}
+
+// .navbar-container {
+//   background: linear-gradient(
+//     to bottom,
+//     hsl(0, 0%, 100%) 0%,
+//     hsla(0, 0%, 100%, 0.858) 15.2%,
+//     hsla(0, 0%, 100%, 0.74) 27.4%,
+//     hsla(0, 0%, 100%, 0.642) 37.1%,
+//     hsla(0, 0%, 100%, 0.561) 44.6%,
+//     hsla(0, 0%, 100%, 0.494) 50.4%,
+//     hsla(0, 0%, 100%, 0.439) 54.8%,
+//     hsla(0, 0%, 100%, 0.393) 58.2%,
+//     hsla(0, 0%, 100%, 0.353) 61.2%,
+//     hsla(0, 0%, 100%, 0.316) 63.9%,
+//     hsla(0, 0%, 100%, 0.279) 67%,
+//     hsla(0, 0%, 100%, 0.24) 70.6%,
+//     hsla(0, 0%, 100%, 0.195) 75.4%,
+//     hsla(0, 0%, 100%, 0.142) 81.6%,
+//     hsla(0, 0%, 100%, 0.078) 89.7%,
+//     hsla(0, 0%, 100%, 0) 100%
+//   );
+// }
+
+.navbar-container nav {
+  // background: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 4rem;
+  @include mx-margin-mobile;
 }
 
 .navbar-container nav img {
-    width: 2rem;
-    filter: contrast(1%);
+  width: 2rem;
+  filter: contrast(1%);
 }

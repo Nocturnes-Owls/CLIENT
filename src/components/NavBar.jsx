@@ -4,8 +4,14 @@ const NavBar = () => {
   return (
     <div className="navbar-container">
       <nav>
-        <img src="/logo.png" alt="" />
-
+        <span>
+          <h2>
+            LOGO
+          </h2>
+        </span>
+        <menu>
+          III
+        </menu>
       </nav>
     </div>
   );

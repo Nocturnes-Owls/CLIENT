@@ -1,46 +1,66 @@
-.header-content{
-    background-image: url('/header-background-a.jpg');
-    background-size: cover;
-    height: 40rem;
-    position: relative;
-    clip-path: polygon(100% 0, 145% 63%, 77% 89%, 0 83%, 0 0);
+.header-content {
+  background-image: url("backheader.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 40rem;
+  position: relative;
+  clip-path: polygon(100% 0, 218% 59%, 77% 96%, 0 90%, 0 0);
 }
 
 .header-content::before {
-    content: "";
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background-color: $primary-color;    
-    opacity: 73%;
+  content: "";
+  position: absolute;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(2px);
+  z-index: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .header-content video {
-    position: absolute;
-    height: 100%;
-    width: 100%;
+  position: absolute;
+  height: 100%;
+  width: 100%;
 }
 
 .image-header {
-    position: absolute;
-    max-width: 20rem;
-    bottom: 4.3rem;
-    right: 0;
+  position: absolute;
+  max-width: 20rem;
+  bottom: 1.3rem;
+  right: 0;
 }
 
 .gradient {
-    background-color: red;
+  background-color: red;
 }
 
 .header-text {
-    position: absolute;
-    margin-left: 2rem;
-    top: 8rem;
+  position: absolute;
+  color: white;
+  @include mx-margin-mobile;
+  top: 9rem;
+  font-family: $primary-font;
 }
 
-// @include mx-response(md){
-//     .image-header {
-//         top: 13rem;
-//         right: 2rem;
-//     }
-// }
+@include mx-response(md) {
+  .header-content {
+    height: 44rem;
+  }
+
+  .image-header {
+    max-width: 22rem;
+    right: 3rem;
+  }
+}
+
+@include mx-response(lg) {
+  .image-header {
+    max-width: 26rem;
+  }
+}
+
+@include mx-response(xl) {
+  .image-header {
+    max-width: 30rem;
+  }
+}

@@ -22,7 +22,12 @@ const Home = () => {
       />
 
       {/* <Slider/> */}
-      <About />
+      <About 
+        title="Nocturne Owls"
+        text="Lorem ipsum dolor sit, amet consectetur adipisicing elite."
+      />
+
+
       <CommunityJoin />
       <Tournament />
       <Contact />
