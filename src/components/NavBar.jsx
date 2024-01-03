@@ -6,7 +6,7 @@ const NavBar = () => {
   const navBlurEffect = () => {
     const scroll = window.scrollY;
 
-    if (scroll > 100) setNavEffect(true);
+    if (scroll > 50) setNavEffect(true);
     else setNavEffect(false);
   };
 
@@ -16,12 +16,15 @@ const NavBar = () => {
 
   return (
     <div className={`${navEffect && "navbar-container-blur"} navbar-container`}>
-      <nav>
-        <span>
-          <img className="navbar-logo" src="/logo.webp" alt="owl head logo" />
-        </span>
-        <menu>III</menu>
-      </nav>
+      <div>
+        <nav>
+          <span>
+            <img className="navbar-logo" src="/logo.webp" alt="owl head logo" />
+          </span>
+
+          <menu></menu>
+        </nav>
+      </div>
     </div>
   );
 };

@@ -2,7 +2,7 @@ import React from "react";
 
 const Header = ({ title, text }) => {
   return (
-    <div>
+    
       <header className="header-content">
         <video
           src="/backgroundheader.mp4"
@@ -26,7 +26,7 @@ const Header = ({ title, text }) => {
           />
         </div>
       </header>
-    </div>
+    
   );
 };
 
