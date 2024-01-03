@@ -1,22 +1,21 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 const NavBar = () => {
-  const navBar = document.querySelector(".navbar-container");
+  const [navEffect, setNavEffect] = useState(false);
 
-  function blurAnimation() {
-    if ( window.scrollY > 100 ){
-      navBar.classList.add("navbar-container-blur")
-    } else {
-      navBar.classList.remove("navbar-container-blur");
-    }
-  }
+  const navBlurEffect = () => {
+    const scroll = window.scrollY;
+
+    if (scroll > 100) setNavEffect(true);
+    else setNavEffect(false);
+  };
 
   useEffect(() => {
-    window.addEventListener("scroll", blurAnimation);
+    addEventListener("scroll", navBlurEffect);
   }, []);
 
   return (
-    <div className="navbar-container">
+    <div className={`${navEffect && "navbar-container-blur"} navbar-container`}>
       <nav>
         <span>
           <h2>LOGO</h2>

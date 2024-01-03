@@ -37,15 +37,9 @@
 // }
 
 .navbar-container nav {
-  // background: black;
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 4rem;
   @include mx-margin-mobile;
-}
-
-.navbar-container nav img {
-  width: 2rem;
-  filter: contrast(1%);
 }
