@@ -3,20 +3,15 @@
   width: 100%;
   color: white;
   z-index: 99;
+  background: none;
+  backdrop-filter: none;
+  transition: all ease-in 200ms;
 }
 
-.navbar-container {
-  animation: blur linear both;
-  animation-timeline: scroll();
-  animation-range: 0 400px;
-}
-
-@keyframes blur {
-  to {
-    box-shadow: 0px 5px 50px -5px hsla(0, 0%, 100%, 0.1), 0px 0px 0 1px hsla(0, 0%, 100%, 0.1);
-    background: rgba(0, 0, 0, .3);
-    backdrop-filter: blur(10px);
-  }
+.navbar-container-blur {
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  transition: all ease-in 200ms;
 }
 
 // .navbar-container {
