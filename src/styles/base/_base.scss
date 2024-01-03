@@ -1,0 +1,45 @@
+.container{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.bg-black{
+    background-color: $black;
+}
+.section{
+    padding: 3rem 0;
+}
+
+.title{
+    font-family: $primary-font;
+    color: $white;
+    margin-bottom: 1rem;
+}
+
+.description{
+    font-family: $secondary-font;
+    font-weight: 300;
+    color: $lightGray;
+    margin-bottom: 1rem;
+}
+
+@include mx-response(lg){
+    .container{
+        width: 1000px;
+    }
+    .flex{
+        flex-direction: row;
+    }
+    .description{
+        font-size: 1.1rem;
+    }
+}
+
+@include mx-response(xl){
+    .container{
+        width: 1200px;
+    }
+    .section{
+        padding: 3.5rem 0;
+    }
+}

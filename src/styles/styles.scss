@@ -2,10 +2,12 @@
 @import './base/variables';
 @import './base/mixins';
 @import './base/reset';
+@import './base/base';
 
 //Componentes
 @import './components/button';
 @import './components/header';
 @import './components/navbar';
+@import './components/community'
 
 //Views
