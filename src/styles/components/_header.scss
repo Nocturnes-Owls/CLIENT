@@ -40,6 +40,8 @@
   max-width: 20rem;
   bottom: 1.3rem;
   right: 0;
+  z-index: 1;
+  filter: brightness(0.9), saturate(1);
 }
 
 .gradient {
