@@ -3,6 +3,15 @@
   width: 100%;
   color: white;
   z-index: 99;
+  background: none;
+  backdrop-filter: none;
+  transition: all ease-in 200ms;
+}
+
+.navbar-container-blur {
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  transition: all ease-in 200ms;
 }
 
 // .navbar-container {
