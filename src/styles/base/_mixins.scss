@@ -41,10 +41,12 @@
   margin-right: $rightValue;
 }
 
-
-
 @mixin mx-blur-filter($value: 10px) {
   backdrop-filter: blur($value);
+}
+
+@mixin mx-sepia-filter($brightness: 0.9, $contrast: 1.04, $sepia: 0.2) {
+  filter: brightness($brightness) contrast($contrast) sepia($sepia);
 }
 
 

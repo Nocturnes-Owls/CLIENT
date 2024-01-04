@@ -1,7 +1,9 @@
 .header-container {
+  clip-path: polygon(100% 0, 218% 59%, 77% 96%, 0 90%, 0 0);
+  background-image: url("fondo-hackaton.webp");
+  background-size: cover;
   height: 40rem;
   position: relative;
-  clip-path: polygon(100% 0, 218% 59%, 77% 96%, 0 90%, 0 0);
   overflow: hidden;
   @include mx-response(xl) {
     height: 80vh;
@@ -21,7 +23,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba($primary-color, 0.8);
+    background-color: rgba($primary-color, 0.2);
   }
 
   .header-content {
@@ -54,7 +56,7 @@
         bottom: 1.3rem;
         right: 0;
         z-index: 1;
-        filter: brightness(0.9);
+        @include mx-sepia-filter;
         @include mx-response(lg) {
           max-width: 34rem;
         }
