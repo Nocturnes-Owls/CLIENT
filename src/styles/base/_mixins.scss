@@ -29,7 +29,7 @@
   }
 }
 
-@mixin mx-flex($justify: center, $align: center, $direction: row) {
+@mixin mx-flex($justify: center, $align: center, $direction: column) {
   display: flex;
   justify-content: $justify;
   align-items: $align;
