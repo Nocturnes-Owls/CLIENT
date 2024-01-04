@@ -16,11 +16,11 @@ const Home = () => {
     <div>
 
       {/* Experimental */}
-      <div className="flag">
+      {/* <div className="flag">
       <span>
             <img className="navbar-logo" src="/logo.webp" alt="owl head logo" />
           </span>
-      </div>
+      </div> */}
       {/* /!\/!\/!\/!\ --- ! --- /!\ /!\ /!\/!\ */}
       
 

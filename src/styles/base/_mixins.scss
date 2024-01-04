@@ -41,7 +41,15 @@
   margin-right: $rightValue;
 }
 
-// @mixin mx-margin-estandar($leftValue: , $rightValue: ) {
-//   margin-left: $leftValue;
-//   margin-right: $rightValue;
-// }
+// En pruebas -----------------------------------------
+
+@mixin mx-margin-desktop($leftValue: 3rem, $rightValue: 3rem) {
+  margin-left: $leftValue;
+  margin-right: $rightValue;
+}
+
+@mixin mx-margin-estandar($margin: 3rem) {
+  margin: $margin;
+}
+
+// ----------------------------------------------------
