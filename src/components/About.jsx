@@ -3,9 +3,18 @@ import React from "react";
 const About = ({ title, text }) => {
   return (
     <section className="section about-container">
-      {/* Seccion texto e imagenes */}
       <div className="about-content container">
-        {/* texto */}
+
+      <div className="about-media-container">
+          <div className="about-media">
+            <div></div>
+            <div></div>
+            <div className="img-container">
+              <img src="buho-about.webp" alt="" />
+            </div>
+          </div>
+        </div>
+
         <div className="about-textside">
           <h1 className="title">ABOUT US</h1>
 
@@ -27,15 +36,7 @@ const About = ({ title, text }) => {
           <button className="subtitle">CONTACT US</button>
         </div>
 
-        <div className="about-media-container">
-          <div className="about-media">
-            <div></div>
-            <div></div>
-            <div className="img-container">
-              <img src="buho-about.webp" alt="" />
-            </div>
-          </div>
-        </div>
+        
       </div>
     </section>
   );

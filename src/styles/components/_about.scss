@@ -37,42 +37,44 @@
     .about-media-container {
       display: flex;
       width: 50%;
-      justify-content: end;
-      
-      .about-media {
-          position: relative;
-          margin-right: 11rem;
+      justify-content: baseline;
 
-        div:nth-child(1) {
-          position: absolute;
-          background: rgba($white, 0.7);
-          top: 0;
-          right: 0;
+      .about-media {
+        position: relative;
+        width: 60%;
+
+        div:nth-child(1),
+        div:nth-child(2) {
           width: $about-figure-width;
           height: $about-figure-height;
+          position: absolute;
+          opacity: 0.6;
+        }
+
+        div:nth-child(1) {
+          background: $white;
+          top: 0;
+          left: 0;
           clip-path: polygon(54% 0, 100% 0%, 45% 100%, 0% 100%);
         }
 
         div:nth-child(2) {
-          position: absolute;
-          width: $about-figure-width;
-          height: $about-figure-height;
-          background: rgba($primary-color, 0.7);
-          opacity: 0.9;
-          top: 41px;
-          right: -106px;
+          background: $primary-color;
+          top: 33px;
+          right: 0;
           clip-path: polygon(54% 0, 100% 0%, 45% 100%, 0% 100%);
         }
 
         .img-container {
           position: absolute;
-          top: 25px;
-          right: 0;
+          top: 35px;
+          right: 50px;
           height: 250px;
-          width: 265px;
+          width: 250px;
           border-radius: 50%;
           border: 4px solid $primary-color;
           box-shadow: inset 0 0 27px -3px $primary-color;
+          @include mx-blur-filter;
           overflow: hidden;
         }
 

@@ -1,78 +1,64 @@
-.header-content {
+.header-container {
   height: 40rem;
   position: relative;
   clip-path: polygon(100% 0, 218% 59%, 77% 96%, 0 90%, 0 0);
   overflow: hidden;
-}
+  @include mx-response(xl) {
+    height: 80vh;
+  }
 
-.header-content video {
-  object-fit: cover;
-  position: absolute;
-  height: 210%;
-  width: 100%;
-  filter: brightness(0.7) contrast(3) saturate(4) opacity(.8);
-}
+  video {
+    object-fit: cover;
+    position: absolute;
+    height: 210%;
+    width: 100%;
+    filter: brightness(0.7) contrast(3) saturate(4) opacity(0.8);
+  }
 
-.video-filter {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba($primary-color, 0.8);
-}
+  .video-filter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($primary-color, 0.8);
+  }
 
-.header-content::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: rgba($primary-color, 0.6);
-  backdrop-filter: blur(1.5px);
-}
-
-.image-header {
-  position: absolute;
-  max-width: 20rem;
-  bottom: 1.3rem;
-  right: 0;
-  z-index: 1;
-  filter: brightness(0.9);
-}
-
-.gradient {
-  background-color: red;
-}
-
-.header-text {
-  position: absolute;
-  color: white;
-  @include mx-margin-mobile;
-  top: 9rem;
-  font-family: $primary-font;
-}
-
-@include mx-response(md) {
   .header-content {
-    height: 44rem;
-  }
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    height: 100%;
+    justify-content: end;
+    @include mx-response(lg) {
+      gap: 0;
+      flex-direction: row;
+      align-items: center;
+    }
 
-  .image-header {
-    max-width: 22rem;
-    right: 3rem;
-  }
-}
+    .header-text {
+      color: white;
+      top: 9rem;
+      font-family: $primary-font;
+      z-index: 1;
+      @include mx-response(xl) {
+        width: 70%;
+      }
+    }
 
-@include mx-response(lg) {
-  .image-header {
-    max-width: 26rem;
-  }
-}
+    .image-header {
+      align-self: flex-end;
 
-@include mx-response(xl) {
-  .image-header {
-    max-width: 30rem;
+      img {
+        max-width: 20rem;
+        bottom: 1.3rem;
+        right: 0;
+        z-index: 1;
+        filter: brightness(0.9);
+        @include mx-response(lg) {
+          max-width: 34rem;
+        }
+      }
+    }
   }
 }

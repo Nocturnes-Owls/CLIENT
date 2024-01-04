@@ -14,16 +14,6 @@ import Button        from "../components/Button";
 const Home = () => {
   return (
     <div>
-
-      {/* Experimental */}
-      {/* <div className="flag">
-      <span>
-            <img className="navbar-logo" src="/logo.webp" alt="owl head logo" />
-          </span>
-      </div> */}
-      {/* /!\/!\/!\/!\ --- ! --- /!\ /!\ /!\/!\ */}
-      
-
       <NavBar />
 
       <Header

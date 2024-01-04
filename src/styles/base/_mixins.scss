@@ -41,6 +41,19 @@
   margin-right: $rightValue;
 }
 
+
+
+@mixin mx-blur-filter($value: 10px) {
+  backdrop-filter: blur($value);
+}
+
+
+
+
+
+
+
+
 // En pruebas -----------------------------------------
 
 @mixin mx-margin-desktop($leftValue: 3rem, $rightValue: 3rem) {
