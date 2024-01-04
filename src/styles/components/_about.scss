@@ -1,16 +1,16 @@
 .about-container {
-  height: 45vh;
+  height: max-content;
 }
 
 .about-content {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
 
   .about-textside {
     display: flex;
     flex-direction: column;
     align-items: baseline;
-    width: 50%;
     gap: 1rem;
 
     button {
@@ -21,47 +21,69 @@
     }
   }
 
-  .about-media {
-    position: relative;
+  .about-media img {
+    display: none;
+  }
+}
 
-    div:nth-child(1) {
-      position: absolute;
-      background: rgba($white, 0.8);
-      top: 0;
-      right: 0;
-      width: 250px;
-      height: 300px;
-      clip-path: polygon(54% 0, 100% 0%, 45% 100%, 0% 100%);
+@include mx-response(lg) {
+  .about-content {
+    flex-direction: row;
+
+    .about-textside {
+      width: 50%;
     }
 
-    div:nth-child(2) {
-      position: absolute;
-      background: rgba($primary-color, 0.7);
-      opacity: 0.9;
-      top: 41px;
-      right: -106px;
-      width: 250px;
-      height: 300px;
-      clip-path: polygon(54% 0, 100% 0%, 45% 100%, 0% 100%);
-    }
+    .about-media-container {
+      display: flex;
+      width: 50%;
+      justify-content: end;
+      
+      .about-media {
+          position: relative;
+          margin-right: 11rem;
 
-    .img-container {
-      position: absolute;
-      width: 265px;
-      height: 250px;
-      overflow: hidden;
-      border-radius: 50%;
-      top: 25px;
-      right: 0;
-      border: 4px solid $primary-color;
-      box-shadow: inset 0 0 27px -3px $primary-color;
-    }
+        div:nth-child(1) {
+          position: absolute;
+          background: rgba($white, 0.7);
+          top: 0;
+          right: 0;
+          width: $about-figure-width;
+          height: $about-figure-height;
+          clip-path: polygon(54% 0, 100% 0%, 45% 100%, 0% 100%);
+        }
 
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: top;
+        div:nth-child(2) {
+          position: absolute;
+          width: $about-figure-width;
+          height: $about-figure-height;
+          background: rgba($primary-color, 0.7);
+          opacity: 0.9;
+          top: 41px;
+          right: -106px;
+          clip-path: polygon(54% 0, 100% 0%, 45% 100%, 0% 100%);
+        }
+
+        .img-container {
+          position: absolute;
+          top: 25px;
+          right: 0;
+          height: 250px;
+          width: 265px;
+          border-radius: 50%;
+          border: 4px solid $primary-color;
+          box-shadow: inset 0 0 27px -3px $primary-color;
+          overflow: hidden;
+        }
+
+        img {
+          display: block;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: top;
+        }
+      }
     }
   }
 }

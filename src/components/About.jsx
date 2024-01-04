@@ -27,11 +27,13 @@ const About = ({ title, text }) => {
           <button className="subtitle">CONTACT US</button>
         </div>
 
-        <div className="about-media">
-          <div></div>
-          <div></div>
-          <div className="img-container">
-            <img src="buho-about.webp" alt="" />
+        <div className="about-media-container">
+          <div className="about-media">
+            <div></div>
+            <div></div>
+            <div className="img-container">
+              <img src="buho-about.webp" alt="" />
+            </div>
           </div>
         </div>
       </div>
