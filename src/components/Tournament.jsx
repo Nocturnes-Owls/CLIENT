@@ -5,7 +5,7 @@ import {
   BsYoutube  
 } from "react-icons/bs";
 
-const Tournament = ({title, subtitle}) => {
+const Tournament = ({title}) => {
   return (
     <section className='section tournament'>
       <div className='container'>

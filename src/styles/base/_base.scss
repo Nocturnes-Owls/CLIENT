@@ -24,6 +24,30 @@
     margin-bottom: 1rem;
 }
 
+input, 
+textarea{
+    background-color: transparent;
+    border: 1px solid $lightGray;
+    padding: 1.5rem 0.8rem 0.5rem;
+    border-radius: 0.2rem;
+    width: 100%;
+    color: #fff;
+    font-family: $secondary-font;
+}
+
+input:focus + label,
+textarea:focus + label,
+.effectLabel{
+    font-size: .8rem;
+    top: 0.5rem;
+}
+label{
+    position: absolute;
+    left: 0.8rem;
+    top: 1rem;
+    transition: .3s all;
+}
+
 @include mx-response(lg){
     .container{
         width: 1000px;
