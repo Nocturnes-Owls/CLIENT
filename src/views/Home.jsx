@@ -2,15 +2,16 @@
 // import JobOffers     from '../views/JobOffers';
 // import Contact       from '../views/Contact';
 
-import Contact from "../components/Contact";
-import Header from "../components/Header";
-import CommunityJoin from "../components/CommunityJoin";
-import Tournament from "../components/Tournament";
-import About from "../components/About";
 // import Slider        from '../components/Slider'
-import NavBar from "../components/NavBar";
-import Button from "../components/Button";
-import Team from "../components/Team";
+// import Button        from '../components/Button';
+
+import Contact          from '../components/Contact';
+import Header           from '../components/Header';
+import CommunityJoin    from '../components/CommunityJoin';
+import Tournament       from '../components/Tournament';
+import About            from '../components/About';
+import NavBar           from '../components/NavBar';
+import Team             from '../components/Team';
 
 const Home = () => {
   return (
