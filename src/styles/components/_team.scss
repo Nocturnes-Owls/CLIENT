@@ -1,0 +1,30 @@
+.team-section {
+  height: 100%;
+  padding-bottom: 4rem;
+  @include mx-response(lg){
+    padding-bottom: 7rem;
+  }
+
+  h1 {
+    margin-bottom: 3rem;
+    @include mx-response(lg) {
+      margin-bottom: 6rem;
+      text-align: center;
+    }
+  }
+
+  .team-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    gap: 2rem;
+
+    @include mx-response(lg) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: center;
+    }
+  }
+}
