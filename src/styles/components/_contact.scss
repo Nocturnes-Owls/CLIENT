@@ -14,6 +14,9 @@
         top: 0;
         z-index: 0;
     }
+    .social-networks{
+        display: none;
+    }
 }
 .contact-info,
 .contact-form{
@@ -22,10 +25,6 @@
 .contact-form{
     margin-top: 2rem;
 }
-.contact-social{
-    display: none;
-}
-
 .content-input{
     margin-bottom: 1rem;
 }
@@ -47,26 +46,12 @@
         .subtitle{
             max-width: 30rem;
         }
+        .social-networks{
+            display: flex;
+        }
     } 
     .contact-form{
         width: 100%;
         max-width: 30rem;
-    }
-    .contact-social{
-        display: flex;
-        gap: 1rem;
-    }
-    .icon{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 2.5rem;
-        height: 2.5rem;
-        border-radius: 50%;
-        border: 1px solid $primary-color;
-        svg{
-            font-size: 1rem;
-            color: $lightGray;
-        }
     }
 }

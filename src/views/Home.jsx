@@ -12,6 +12,7 @@ import Tournament       from '../components/Tournament';
 import About            from '../components/About';
 import NavBar           from '../components/NavBar';
 import Team             from '../components/Team';
+import Footer           from '../components/Footer';
 
 const Home = () => {
   return (
@@ -48,6 +49,7 @@ const Home = () => {
       />
       <Tournament title="HACKATON" />
       <Contact />
+      <Footer />
     </div>
   );
 };
