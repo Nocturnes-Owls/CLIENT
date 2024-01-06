@@ -11,22 +11,37 @@
 
 .btnPrimary{
     padding: 0.8rem 1.5rem;
-    background-color: $primary-color;
-    border: 1px solid $primary-color;
-    border-radius: 1.5rem;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     transition: .3s all;
+    border: 1px solid $primary-color;
     font-family: $primary-font;
-    &:hover{
+    text-transform: uppercase;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &::after{
+        content: "";
+        background-color: $primary-color;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        transition: .3s;
+    }
+    &:hover::after{
+        width: 0;
+        height: 0;
         background-color: transparent;
+    }
+    .btn-text{
+        position: relative;
+        z-index: 1;
     }
 }
 
 
 @include mx-response(lg){
     .btnPrimary{
-        background-color: $primary-color;
-        border-color: $primary-color;
         font-size: 1rem;
     }
 }

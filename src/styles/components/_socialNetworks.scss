@@ -10,14 +10,22 @@
     height: 2.7rem;
     border-radius: 50%;
     border: 1px solid $primary-color;
-    transition: .3s;
+    position: relative;
     svg{
         font-size: 1.2rem;
         color: $lightGray;
+        position: relative;
     }
-
-    &:hover{
-        border: transparent;
-        background-color: $primary-color;
+    &::before{
+        content: "";
+        width: 2.7rem;
+        height: 2.7rem;
+        border-radius: 50%;
+        border: 1px solid $primary-color;
+        transition: .3s;
+        position: absolute;
+    }
+    &:hover::before{
+        border-width: 1.35rem;
     }
 }

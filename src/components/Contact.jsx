@@ -24,7 +24,7 @@ const Contact = () => {
           <SocialNetworks  
             gmail ="#"
             facebook = "#"
-            instagram = "#"
+            instagram = "https://www.instagram.com/buhos__nocturnos?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
           />
         </div>
         <form action="" className="contact-form">

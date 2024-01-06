@@ -6,8 +6,9 @@ const Footer = () => {
         <div className="footer-social container">
             <SocialNetworks 
                 gmail ="#"
+                discord="https://discord.gg/EBAcH6N9"
                 facebook = "#"
-                instagram = "#"
+                instagram = "https://www.instagram.com/buhos__nocturnos?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
                 youtube = "#"
             />
             <nav className="nav">

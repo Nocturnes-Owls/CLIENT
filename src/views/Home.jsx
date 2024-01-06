@@ -35,9 +35,6 @@ const Home = () => {
           button: "CONTACT US"
         }}
       />
-
-      <Team title="MEET OUR TEAM" />
-
       <CommunityJoin
         title="Comunidad"
         subtitle="Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus adipisci veritatis quasi ex. Dicta optio consectetur aliquid modi, obcaecati fugiat accusamus aspernatur perferendis vero enim molestias numquam iste maxime quasi?"
@@ -45,6 +42,7 @@ const Home = () => {
       />
       <Tournament title="HACKATON" />
       <Contact />
+      <Team title="MEET OUR TEAM" />
       <Footer />
     </div>
   );

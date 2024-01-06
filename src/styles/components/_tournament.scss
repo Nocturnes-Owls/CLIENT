@@ -48,14 +48,13 @@
 }
 .award-icon{
     background-color: $black;
-    border: 2px solid $primary-color;
+    box-shadow: 0 0 0.4rem rgba($primary-color, .9);
     border-radius: 50%;
     width: 2.5rem;
     height: 2.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    
     svg{
         color: $primary-color;
         font-size: 1.1rem;
@@ -68,21 +67,14 @@
 }
 
 .hackaton-btn{
-    text-align: center;
+    display: flex;
+    gap: 2rem;
     margin: 3rem 0;
     font-size: 1.2rem;
-    .btn{
-        font-family: $primary-font;
-        background-color: $black;
-        border: 1px solid $black;
-        border-radius: 1.5rem;
-        padding: 0.8rem 1.5rem;
-        transition: .3s;
-        &:hover{
-            transform: scale(1.1);
-        }
-    }
-} 
+    .btnPrimary{
+        border-width: 2px;
+    } 
+}
 
 .hackaton-sponsor{
     display: flex;
