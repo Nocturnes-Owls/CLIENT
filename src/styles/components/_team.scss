@@ -7,7 +7,7 @@
 
   h1 {
     margin-bottom: 3rem;
-    @include mx-response(lg) {
+    @include mx-response(md) {
       margin-bottom: 6rem;
       text-align: center;
     }
@@ -17,10 +17,11 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    align-content: center;
     gap: 2rem;
+    flex-wrap: wrap;
+    align-content: center;
 
-    @include mx-response(lg) {
+    @include mx-response(md) {
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: space-around;

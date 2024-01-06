@@ -1,28 +1,60 @@
 import React, { useEffect, useState } from "react";
+import {
+  BsList,
+  BsDiscord,
+  BsTrophyFill,
+  BsFillHouseDoorFill,
+  BsFillPeopleFill,
+} from "react-icons/bs";
 
 const NavBar = () => {
-  const [navEffect, setNavEffect] = useState(false);
+  const [toggleMenu, setToggleMenu] = useState(false);
 
-  const navBlurEffect = () => {
-    const scroll = window.scrollY;
-
-    if (scroll > 50) setNavEffect(true);
-    else setNavEffect(false);
+  const handleToggleMenu = () => {
+    setToggleMenu(!toggleMenu);
   };
 
   useEffect(() => {
-    addEventListener("scroll", navBlurEffect);
   }, []);
 
   return (
-    <div className={`${navEffect && "navbar-container-blur"} navbar-container`}>
+    <div className={`navbar-container`}>
       <div className="container">
         <nav>
           <span>
             <img className="navbar-logo" src="/logo.webp" alt="owl head logo" />
           </span>
 
-          <menu></menu>
+          <menu>
+            <button
+              className={`menu-btn ${toggleMenu && "menu-btn-on"}`}
+              onClick={handleToggleMenu}
+            >
+              <BsList />
+            </button>
+
+            <div
+              className={`menu-active ${
+                toggleMenu ? "menu-animation-on" : "menu-animation-off"
+              }`}
+            ></div>
+
+            <button className={toggleMenu ? "opt-1" : "opt-hidden"}>
+              <BsFillHouseDoorFill />
+            </button>
+
+            <button className={toggleMenu ? "opt-2" : "opt-hidden"}>
+              <BsFillPeopleFill />
+            </button>
+
+            <button className={toggleMenu ? "opt-3" : "opt-hidden"}>
+              <BsTrophyFill />
+            </button>
+
+            <button className={toggleMenu ? "opt-4" : "opt-hidden"}>
+              <BsDiscord />
+            </button>
+          </menu>
         </nav>
       </div>
     </div>
