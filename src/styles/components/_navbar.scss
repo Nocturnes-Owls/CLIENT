@@ -110,24 +110,20 @@
   }
 }
 
-/* @keyrames */
-// @keyframes scale-to-one-jumping {
-//   0% {
-//     transform: scale(0);
-//   }
-//   30% {
-//     transform: scale(1.5);
-//   }
-//   60% {
-//     transform: scale(1);
-//   }
-//   80% {
-//     transform: scale(1.5);
-//   }
-//   100% {
-//     transform: scale(1);
-//   }
-// }
+@include mx-response(lg) {
+  .navbar-container {
+    
+
+    nav {
+      menu {
+        .menu-btn {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
 @keyframes scale-to-one-jumping {
   0% {
     transform: scale(0);

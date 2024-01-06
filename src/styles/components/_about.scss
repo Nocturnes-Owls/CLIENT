@@ -73,7 +73,9 @@
           right: 50px;
           height: 250px;
           width: 250px;
-          border-radius: 50%;
+          // border-radius: 50%;
+          // clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+          transform: skew(20px);
           border: 4px solid $primary-color;
           box-shadow: inset 0 0 27px -3px $primary-color;
           @include mx-blur-filter;

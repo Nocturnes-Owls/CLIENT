@@ -1,6 +1,6 @@
 import React from "react";
 
-const About = ({ title, p1, p2, buttonText }) => {
+const About = ({ text }) => {
   return (
     <section className="section about-container">
       <div className="about-content container">
@@ -16,18 +16,18 @@ const About = ({ title, p1, p2, buttonText }) => {
         </div>
 
         <div className="about-textside">
-          <h1 className="title">{ title }</h1>
+          <h1 className="title">{ text.title }</h1>
 
           <div>
             <p className="subtitle">
-              { p1 }
+              { text.paragraphs.p1 }
             </p>
             <p className="subtitle">
-              { p2 }
+              { text.paragraphs.p2 }
             </p>
           </div>
 
-          <button className="subtitle">{ buttonText }</button>
+          <button className="subtitle">{ text.button }</button>
         </div>        
       </div>
     </section>
