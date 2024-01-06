@@ -1,11 +1,6 @@
 import Button from "./Button";
 import { useState } from "react";
-import { 
-  BsEnvelopeFill,
-  BsFacebook,
-  BsInstagram,
-} from "react-icons/bs";
-
+import SocialNetworks from "./SocialNetworks";
 
 const Contact = () => {
   const [form, setForm] = useState({
@@ -26,11 +21,11 @@ const Contact = () => {
         <div className="contact-info">
           <h1 className="title">Contacto</h1>
           <p className="subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, corporis accusamus! Distinctio minima nostrum.</p>
-          <div className="contact-social">
-              <a href="" className="icon"><BsEnvelopeFill/></a>
-              <a href="" className="icon"><BsFacebook/></a>
-              <a href="" className="icon"><BsInstagram/></a>
-          </div>
+          <SocialNetworks  
+            gmail ="#"
+            facebook = "#"
+            instagram = "#"
+          />
         </div>
         <form action="" className="contact-form">
           <div className="container-inputs">

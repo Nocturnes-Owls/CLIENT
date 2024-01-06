@@ -1,0 +1,23 @@
+.social-networks{
+    display: flex;
+    gap: 1.2rem;
+}
+.icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.7rem;
+    height: 2.7rem;
+    border-radius: 50%;
+    border: 1px solid $primary-color;
+    transition: .3s;
+    svg{
+        font-size: 1.2rem;
+        color: $lightGray;
+    }
+
+    &:hover{
+        border: transparent;
+        background-color: $primary-color;
+    }
+}
