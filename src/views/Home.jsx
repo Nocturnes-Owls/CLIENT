@@ -13,6 +13,7 @@ import About from "../components/About";
 import NavBar from "../components/NavBar";
 import Team from "../components/Team";
 import Footer from "../components/Footer";
+import TournamentTwo from "../components/TournamentTwo";
 
 const Home = () => {
   return (
@@ -35,6 +36,7 @@ const Home = () => {
           button: "CONTACT US"
         }}
       />
+      <TournamentTwo />
       <CommunityJoin
         title="Comunidad"
         subtitle="Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus adipisci veritatis quasi ex. Dicta optio consectetur aliquid modi, obcaecati fugiat accusamus aspernatur perferendis vero enim molestias numquam iste maxime quasi?"

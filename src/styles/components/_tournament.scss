@@ -20,13 +20,13 @@
     }
 }
 
-.img-hackaton{
-    max-width: 30rem;
+.hackaton-video video{
+    width: 100%;
 }
 
 .hackaton-title{
     text-align: center;
-    margin: 3rem 0;
+    margin: 2.5rem 0;
     .title{
         font-size: 3.5rem;
         font-weight: 900;
@@ -38,7 +38,7 @@
     display: flex;
     align-items: center;
     gap: 1rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 .awards-title{
     font-size: 1.5rem;
@@ -69,7 +69,7 @@
 .hackaton-btn{
     display: flex;
     gap: 2rem;
-    margin: 3rem 0;
+    margin: 2.5rem 0;
     font-size: 1.2rem;
     .btnPrimary{
         border-width: 2px;
@@ -79,15 +79,40 @@
 .hackaton-sponsor{
     display: flex;
     justify-content: center;
-    gap: 1rem;
-    margin: 4rem 0 2rem;
+    gap: 1.5rem;
+    margin: 3rem 0 4rem;
     img{
-        max-width: 6rem;
+        max-width: 7rem;
     }
 }
 
 .hackaton-social{
     display: none;
+}
+
+/*PRUEBAS*/
+.tournamentTwo{
+    padding: 0;
+    .hackaton-description{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+        .title{
+            font-size: 3rem;
+            padding-top: 0.5rem;
+        }
+    }
+    .hackaton-btn, 
+    .hackaton-sponsor{
+        margin: 1.8rem 0;
+    }
+
+}
+.hackaton-video2{
+    video{
+       width: 100%; 
+    }
 }
 
 @include mx-response(lg){
@@ -100,7 +125,12 @@
             justify-content: space-between;
         }
     }
-
+    .hackaton-video{
+        max-width: 40rem;
+    }
+    .hackaton-description{
+        padding-right: 3rem;
+    }
     .hackaton-title .title{
         font-size: 4.5rem;
     }
