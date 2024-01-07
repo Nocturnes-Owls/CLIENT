@@ -5,18 +5,19 @@ const Footer = () => {
     <footer className="footer">
         <div className="footer-social container">
             <SocialNetworks 
-                gmail ="#"
+                gmail ="thenocturneowls@gmail.com"
                 discord="https://discord.gg/EBAcH6N9"
-                facebook = "#"
+                github = "https://github.com/Nocturnes-Owls"
                 instagram = "https://www.instagram.com/buhos__nocturnos?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-                youtube = "#"
+                youtube = "https://www.youtube.com/channel/UCXeKWXmLaSLvLjPdctfoQyA"
             />
             <nav className="nav">
-                <a href="#" className="nav-link">Home</a>
-                <a href="#" className="nav-link">Nosotros</a>
-                <a href="#" className="nav-link">Comunidad</a>
-                <a href="#" className="nav-link">Torneos</a>
-                <a href="#" className="nav-link">Contacto</a>
+                <a href="#" className="nav-link">Inicio</a>
+                <a href="#about" className="nav-link">Nosotros</a>
+                <a href="#community" className="nav-link">Comunidad</a>
+                <a href="#tournament" className="nav-link">Torneos</a>
+                <a href="#contact" className="nav-link">Contacto</a>
+                <a href="#team" className="nav-link">Equipo</a>
             </nav>
         </div>
         <div className="copyright">
