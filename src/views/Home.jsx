@@ -21,30 +21,32 @@ const Home = () => {
       <NavBar />
 
       <Header
-        title="Nocturne Owls"
-        text="Lorem ipsum dolor sit, amet consectetur adipisicing elit."
+        title="NOCTURNE OWLS"
+        text="Bienvenidos a la comunidad de los búhos nocturnos, una comunidad de desarrolladores de proyectos que se esfuerzan por crear proyectos innovadores y sostenibles."
       />
 
       {/* <Slider/> */}
       <About
         text={{
-          title: "ABOUT US",
+          title: "ACERCA DE NOSOTROS",
           paragraphs: {
-            p1: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, asperiores aut nam aliquid molestiae deserunt culpa, pariatur quis numquam odit nulla, ullam similique at amet ea voluptas eiusquisquam in.",
-            p2: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, asperiores aut nam aliquid molestiae deserunt culpa, pariatur quisnumquam odit nulla, ullam similique at amet ea voluptas eius quisquam in.",
+            p1: "El principio fundamental de la comunidad de los búhos nocturnos es la solidaridad. Los miembros de la comunidad se apoyan mutuamente y se ayudan a alcanzar sus objetivos. Esto refleja el compromiso de la comunidad con la cooperación y el trabajo en equipo, dos cualidades esenciales para los desarrolladores de proyectos.",
+            p2: "La comunidad de los búhos nocturnos también es una fuente de inspiración para los desarrolladores de proyectos. Los miembros de la comunidad comparten sus conocimientos y experiencias, lo que ayuda a otros a aprender y crecer. Además, la comunidad organiza eventos y talleres que promueven la innovación y el desarrollo sostenible.",
           },
-          button: "CONTACT US"
+          button: "CONTACTANOS",
         }}
       />
-      <TournamentTwo />
+      {/* <TournamentTwo /> */}
       <CommunityJoin
         title="Comunidad"
-        subtitle="Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus adipisci veritatis quasi ex. Dicta optio consectetur aliquid modi, obcaecati fugiat accusamus aspernatur perferendis vero enim molestias numquam iste maxime quasi?"
+        subtitle="Si eres un desarrollador de proyectos que busca una comunidad solidaria e inspiradora, te invitamos a unirte a la comunidad de los búhos nocturnos."
         image="./comunity.webp"
       />
       <Tournament title="HACKATON" />
-      <Contact />
-      <Team title="MEET OUR TEAM" />
+      <Contact
+        description="No dejes de aclarar tus dudas o dejar algun comentario para nosotros."
+      />
+      <Team title="NUESTRO EQUIPO" />
       <Footer />
     </div>
   );

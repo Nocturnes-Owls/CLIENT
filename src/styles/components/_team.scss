@@ -6,9 +6,9 @@
   }
 
   h1 {
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     @include mx-response(md) {
-      margin-bottom: 6rem;
+      margin-bottom: 4rem;
       text-align: center;
     }
   }

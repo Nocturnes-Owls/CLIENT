@@ -2,7 +2,7 @@ import Button from "./Button";
 import { useState } from "react";
 import SocialNetworks from "./SocialNetworks";
 
-const Contact = () => {
+const Contact = ({description}) => {
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -20,7 +20,7 @@ const Contact = () => {
       <div className="container">
         <div className="contact-info">
           <h1 className="title">Contacto</h1>
-          <p className="subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, corporis accusamus! Distinctio minima nostrum.</p>
+          <p className="subtitle">{description}</p>
           <SocialNetworks  
             gmail ="#"
             facebook = "#"

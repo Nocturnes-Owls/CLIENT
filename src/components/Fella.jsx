@@ -1,26 +1,44 @@
 import React from "react";
+import { BsLinkedin, BsGithub, BsBriefcaseFill } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
-const Fella = ({ name, role, img }) => {
+const Fella = ({ fella }) => {
   return (
     <div className="fella-container">
       <div className="fella-border"></div>
 
       <div className="fella-portrait">
-        <img src={img} alt="" />
+        <img src={fella.img} alt=""></img>
       </div>
 
       <div className="fella-info">
         <p>
-          <strong>{ name }</strong>
+          <strong>{fella.name}</strong>
         </p>
         <p>
-          <strong>{ role }</strong>
+          <strong>{fella.rol}</strong>
         </p>
+
+        <div className="fella-social">
+          {fella.linkedIn && (
+            <Link to={fella.linkedIn} target="_blank" rel="noopener noreferrer">
+              <BsLinkedin />
+            </Link>
+          )}
+          {fella.gitHub && (
+            <Link to={fella.gitHub} target="_blank" rel="noopener noreferrer">
+              <BsGithub />
+            </Link>
+          )}
+          {fella.portfolio && (
+            <Link to={fella.portfolio} target="_blank" rel="noopener noreferrer">
+              <BsBriefcaseFill />
+            </Link>
+          )}
+        </div>
       </div>
     </div>
   );
 };
 
 export default Fella;
-
-

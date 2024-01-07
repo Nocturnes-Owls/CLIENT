@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "./Button";
 
 const About = ({ text }) => {
   return (
@@ -27,7 +28,7 @@ const About = ({ text }) => {
             </p>
           </div>
 
-          <button className="subtitle">{ text.button }</button>
+          <Button label="CONTACTANOS" />
         </div>        
       </div>
     </section>
