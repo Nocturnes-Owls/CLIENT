@@ -1,25 +1,26 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import NavBar from "../components/NavBar";
 
 const Header = ({ title, text }) => {
-  const useObserverIntersection = (element, setStateHandler) => {
-    
-  }
+  const [headerIn, setHeaderIn] = useState(false);
 
   useEffect(() => {
-    let headerSection = document.querySelector(".header-container");
-
-    const verifyView = (entries) => {
-      let entry = entries[0];
-      if(entry.isIntersecting) {
-        console.log("Element visible");
+    
+    const observer = new IntersectionObserver((entries) => {
+      const entry = entries[0];
+      if (entry.isIntersecting) {
+        setHeaderIn(true)
+        observer.unobserve(entry.target)
       }
       console.log("Element no-visible");
-    };
-
-    let observer = new IntersectionObserver(verifyView, {});
+    }, {
+      threshold: 0.8,
+    });
+    
+    const headerSection = document.getElementById("header");
 
     observer.observe(headerSection);
+
   }, []);
 
   return (
@@ -27,11 +28,11 @@ const Header = ({ title, text }) => {
       <NavBar />
       <header id="header" className="header-container">
         <div className="container header-content">
-          <div className="header-text">
+          <div className={`header-text ${ headerIn && "header-text-animation-in"}`}>
             <h1>{title}</h1>
             <h2>{text}</h2>
           </div>
-          <div className="header-image">
+          <div className={`header-image ${ headerIn && "header-image-animation-in" }`}>
             <img src="/owls.webp" alt="Five owls rest in the mountain" />
           </div>
         </div>

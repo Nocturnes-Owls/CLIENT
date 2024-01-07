@@ -30,30 +30,28 @@
       .menu-btn {
         background: $primary-color;
         border: none;
-        box-shadow: 0px 1px 6px rgba($black, 0.3);
+        border-radius: 50%;
         color: white;
         display: flex;
         font-size: 2rem;
-        // @include mx-sepia-filter;
         padding: 8px;
-        clip-path: polygon(
-          30% 0%,
-          70% 0%,
-          100% 30%,
-          100% 70%,
-          70% 100%,
-          30% 100%,
-          0% 70%,
-          0% 30%
-        );
-      }
 
-      .menu-btn-on {
-        box-shadow: 0px 1px 60px rgba($black, 0.9);        
+        // opt 2 geometry
+        // @include mx-sepia-filter;
+        // clip-path: polygon(
+        //   30% 0%,
+        //   70% 0%,
+        //   100% 30%,
+        //   100% 70%,
+        //   70% 100%,
+        //   30% 100%,
+        //   0% 70%,
+        //   0% 30%
+        // );
       }
 
       .menu-active {
-        background: rgba($primary-color, 0.6);
+        background: rgba($primary-color, 28%);
         clip-path: polygon(
           50% 0%,
           83% 12%,
@@ -137,14 +135,14 @@
     nav {
       menu {
         .menu-btn {
-          padding: 15px;
+          padding: 0.5rem;
           font-size: 2.8rem;
         }
 
         .menu-active {
-          padding: 244px;
-          right: -213px;
-          top: -216px;
+          padding: 216px;
+          right: -189px;
+          top: -193px;
         }
 
         .opt-1,
@@ -152,8 +150,8 @@
         .opt-3,
         .opt-4,
         .opt-5 {
-          @include mx-width-heigth-simetric(4.3rem);
-          font-size: 2.3rem;
+          @include mx-width-heigth-simetric(3.3rem);
+          font-size: 1.8rem;
 
           p {
             font-size: 1.4rem;
@@ -165,28 +163,32 @@
         }
 
         .opt-1 {
-          top: -29px;
-          left: -223px;
+          top: -25px;
+          left: -190px;
         }
 
         .opt-2 {
-          top: 121px;
-          left: -194px;
+          top: 110px;
+          left: -165px;
         }
 
         .opt-3 {
-          top: 214px;
-          left: -83px;
+          top: 195px;
+          left: -70px;
         }
 
         .opt-4 {
-          top: 222px;
-          left: 55px;
+          top: 200px;
+          left: 65px;
         }
       }
     }
   }
 }
+
+//     box-shadow: inset 126px -112px 135px 23px #ff9e3a6b;
+//     transform: rotate(198deg);
+
 
 @keyframes scale-to-one-jumping {
   0% {

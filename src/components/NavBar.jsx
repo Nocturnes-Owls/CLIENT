@@ -9,7 +9,7 @@ import {
 import { GiOwl } from "react-icons/gi";
 
 const NavBar = () => {
-  const [toggleMenu, setToggleMenu] = useState(false);
+  const [toggleMenu, setToggleMenu] = useState(true);
 
   const handleToggleMenuOn = () => {
     setToggleMenu(true);

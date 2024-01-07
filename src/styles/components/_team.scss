@@ -4,6 +4,11 @@
 
   h1 {
     margin-bottom: 2rem;
+    opacity: 0;
+  }
+
+  h1.team-title-animation-in {
+    animation: fade-in-top 0.5s ease 0.5s 1 forwards;
   }
 
   .team-container {
@@ -13,6 +18,11 @@
     gap: 2rem;
     flex-wrap: wrap;
     align-content: center;
+    opacity: 0;
+  }
+
+  .team-container-animation-in {
+    animation: fade-in 0.8s ease 1s 1 forwards;
   }
 }
 
@@ -30,7 +40,6 @@
       margin-bottom: 4rem;
       text-align: center;
       width: max-content;
-
       &::before {
         content: "";
         display: inline-block;

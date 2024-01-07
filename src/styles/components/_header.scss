@@ -17,7 +17,6 @@
       font-family: $primary-font;
       max-width: 20rem;
       opacity: 0;
-      animation: fade-in-left 1s ease 1s normal forwards;
 
       h1 {
         position: relative;
@@ -39,10 +38,14 @@
       }
     }
 
+    .header-text-animation-in {
+      animation: fade-in-left 1s ease 1s normal forwards;
+    }
+
     .header-image {
       align-self: end;
       opacity: 0;
-      animation: fade-in-bottom 1s ease 1s 1 forwards;
+
       img {
         max-width: 17.5rem;
         bottom: 1.3rem;
@@ -50,6 +53,10 @@
         z-index: 1;
         @include mx-sepia-filter;
       }
+    }
+
+    .header-image-animation-in {
+      animation: fade-in-bottom 1s ease 1s 1 forwards;
     }
   }
 }
@@ -94,47 +101,47 @@
 }
 
 @keyframes fade-in-left {
-	0% {
-		opacity: 0;
-		transform: translateX(-50px);
-	}
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
 
-	100% {
-		opacity: 1;
-		transform: translateX(0);
-	}
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 @keyframes fade-in-right {
-	0% {
-		opacity: 0;
-		transform: translateX(50px);
-	}
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
 
-	100% {
-		opacity: 1;
-		transform: translateX(0);
-	}
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 @keyframes fade-in-bottom {
-	0% {
-		opacity: 0;
-		transform: translateY(50px);
-	}
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
 
-	100% {
-		opacity: 1;
-		transform: translateY(0);
-	}
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes fade-in {
-	0% {
-		opacity: 0;
-	}
+  0% {
+    opacity: 0;
+  }
 
-	100% {
-		opacity: 1;
-	}
+  100% {
+    opacity: 1;
+  }
 }
