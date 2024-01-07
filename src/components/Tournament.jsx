@@ -7,7 +7,7 @@ import {
 
 const Tournament = ({title}) => {
   return (
-    <section className='section tournament'>
+    <section id="tournament" className='section tournament'>
       <div className='container'>
         <div className="hackaton-img">
           <img src="./img-hackaton.webp" alt="Imagen hackaton" className="img-hackaton" />

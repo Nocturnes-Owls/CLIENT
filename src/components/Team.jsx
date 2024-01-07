@@ -3,7 +3,7 @@ import Fella from "./Fella.jsx";
 
 const Team = ({ title }) => {
   return (
-    <section className="section container team-section">
+    <section id="team" className="section container team-section">
       <h1 className="title">{title}</h1>
       <div className="container team-container">
 

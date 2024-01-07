@@ -1,12 +1,14 @@
 .navbar-container {
+  font-family: $secondary-font;
   position: fixed;
-  width: 100%;
   height: min-content;
   color: white;
   z-index: 99;
   background: none;
   backdrop-filter: none;
   transition: all ease-out 500ms;
+  right: 1.2rem;
+  top: 1.2rem;
 
   nav {
     align-items: center;
@@ -15,7 +17,6 @@
 
     span {
       width: 4rem;
-
       .navbar-logo {
         filter: invert(1);
         opacity: 0.6;
@@ -29,23 +30,41 @@
       .menu-btn {
         background: $secondary-color;
         border: none;
-        border-radius: 50%;
         box-shadow: 0px 1px 6px rgba($black, 0.3);
         color: white;
         display: flex;
         font-size: 2rem;
         @include mx-sepia-filter;
         padding: 8px;
+        clip-path: polygon(
+          30% 0%,
+          70% 0%,
+          100% 30%,
+          100% 70%,
+          70% 100%,
+          30% 100%,
+          0% 70%,
+          0% 30%
+        );
       }
 
       .menu-btn-on {
-        box-shadow: 0px 1px 60px rgba($black, 0.9);
+        box-shadow: 0px 1px 60px rgba($black, 0.9);        
       }
 
       .menu-active {
-        background: rgba($gray, 0.6);
-        backdrop-filter: blur(3px);
-        border-radius: 50%;
+        background: rgba($primary-color, 0.6);
+        clip-path: polygon(
+          50% 0%,
+          83% 12%,
+          100% 43%,
+          94% 78%,
+          68% 100%,
+          32% 100%,
+          6% 78%,
+          0% 43%,
+          17% 12%
+        );
         padding: 91px;
         position: absolute;
         right: -67px;
@@ -68,18 +87,17 @@
       .opt-5 {
         align-items: center;
         animation: scale-to-one-jumping 300ms ease-in-out;
-        background: $secondary-color;
+        background: $primary-color;
         border: none;
         border-radius: 50%;
         box-shadow: 0px 1px 6px rgba($black, 0.3);
         color: white;
-        display: block;
         display: flex;
+        flex-direction: column;
         font-size: 1.3rem;
-        height: 2.2rem;
+        @include mx-width-heigth-simetric(2.2rem);
         justify-content: center;
         position: absolute;
-        width: 2.2rem;
         z-index: -1;
       }
 
@@ -103,8 +121,8 @@
       }
 
       .opt-4 {
-        top: 101px;
-        left: 21px;
+        top: 99px;
+        left: 23px;
       }
     }
   }
@@ -112,12 +130,56 @@
 
 @include mx-response(lg) {
   .navbar-container {
-    
+    right: 4rem;
+    top: 2rem;
 
     nav {
       menu {
         .menu-btn {
+          padding: 15px;
+        }
+
+        .menu-active {
+          padding: 244px;
+          right: -213px;
+          top: -216px;
+        }
+
+        .opt-1,
+        .opt-2,
+        .opt-3,
+        .opt-4,
+        .opt-5 {
+          @include mx-width-heigth-simetric(4.3rem);
+          font-size: 2.3rem;
+
+          p {
+            font-size: 1.4rem;
+          }
+        }
+
+        .opt-hidden {
           display: none;
+        }
+
+        .opt-1 {
+          top: -29px;
+          left: -223px;
+        }
+
+        .opt-2 {
+          top: 121px;
+          left: -194px;
+        }
+
+        .opt-3 {
+          top: 214px;
+          left: -83px;
+        }
+
+        .opt-4 {
+          top: 222px;
+          left: 55px;
         }
       }
     }

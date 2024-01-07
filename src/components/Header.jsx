@@ -2,7 +2,7 @@ import React from "react";
 
 const Header = ({ title, text }) => {
   return (
-    <header className="header-container">
+    <header id="header" className="header-container">
       {/* <video src="/backgroundheader.mp4" autoPlay loop muted></video> */}
       <div className="video-filter"></div>
 

@@ -50,7 +50,10 @@
 }
 
 
-
+@mixin mx-width-heigth-simetric ($value) {
+  width: $value;
+  height: $value;
+}
 
 
 
