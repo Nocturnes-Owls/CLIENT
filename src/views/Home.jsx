@@ -1,25 +1,21 @@
 // import Resources     from '../views/Resources';
 // import JobOffers     from '../views/JobOffers';
 // import Contact       from '../views/Contact';
-
 // import Slider        from '../components/Slider'
 // import Button        from '../components/Button';
+// import TournamentTwo from "../components/TournamentTwo";
 
 import Contact from "../components/Contact";
 import Header from "../components/Header";
 import CommunityJoin from "../components/CommunityJoin";
 import Tournament from "../components/Tournament";
 import About from "../components/About";
-import NavBar from "../components/NavBar";
 import Team from "../components/Team";
 import Footer from "../components/Footer";
-import TournamentTwo from "../components/TournamentTwo";
 
 const Home = () => {
   return (
     <div>
-      <NavBar />
-
       <Header
         title="NOCTURNE OWLS"
         text="Bienvenidos a la comunidad de los búhos nocturnos, una comunidad de desarrolladores de proyectos que se esfuerzan por crear proyectos innovadores y sostenibles."

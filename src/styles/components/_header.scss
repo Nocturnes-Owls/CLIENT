@@ -2,57 +2,139 @@
   clip-path: polygon(100% 0, 218% 59%, 77% 96%, 0 90%, 0 0);
   background-image: url("fondo-hackaton.webp");
   background-size: cover;
-  height: 40rem;
+  height: 36.5rem;
   position: relative;
-  overflow: hidden;
-  @include mx-response(xl) {
-    height: 80vh;
-  }
+  color: white;
 
   .header-content {
     display: flex;
     flex-direction: column;
-    gap: 2.5rem;
-    height: 100%;
     justify-content: end;
-    @include mx-response(lg) {
-      gap: 0;
-      flex-direction: row;
-      align-items: center;
-    }
+    gap: 0.5rem;
+    height: 100%;
 
     .header-text {
-      color: white;
-      top: 9rem;
       font-family: $primary-font;
-      z-index: 1;
+      max-width: 20rem;
+      opacity: 0;
+      animation: fade-in-left 1s ease 1s normal forwards;
 
       h1 {
+        position: relative;
         margin-bottom: 1.7rem;
+        max-width: max-content;
+        &::before {
+          content: "";
+          display: inline-block;
+          position: absolute;
+          background-color: $primary-color;
+          width: 98%;
+          height: 1.5px;
+          bottom: -0.8rem;
+        }
       }
 
-      @include mx-response(md) {
-        width: 70%;
-
-        .header-text {
-          top: 5rem;
-        }
+      h2 {
+        line-height: 1.3;
       }
     }
 
-    .image-header {
-      align-self: flex-end;
-
+    .header-image {
+      align-self: end;
+      opacity: 0;
+      animation: fade-in-bottom 1s ease 1s 1 forwards;
       img {
-        max-width: 20rem;
+        max-width: 17.5rem;
         bottom: 1.3rem;
         right: 0;
         z-index: 1;
         @include mx-sepia-filter;
-        @include mx-response(lg) {
-          max-width: 34rem;
+      }
+    }
+  }
+}
+
+@include mx-response(md) {
+  .header-container {
+    .header-content {
+      gap: 0;
+      flex-direction: row;
+      justify-content: space-between;
+
+      .header-text {
+        align-self: center;
+        margin-bottom: 3rem;
+        max-width: 30rem;
+        top: 5rem;
+      }
+
+      .header-image {
+        img {
+          max-width: 19.3rem;
         }
       }
     }
   }
+}
+
+@include mx-response(lg) {
+  .header-container {
+    .header-content {
+      .header-text {
+        max-width: 43rem;
+      }
+
+      .header-image {
+        img {
+          max-width: 25rem;
+        }
+      }
+    }
+  }
+}
+
+@keyframes fade-in-left {
+	0% {
+		opacity: 0;
+		transform: translateX(-50px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes fade-in-right {
+	0% {
+		opacity: 0;
+		transform: translateX(50px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes fade-in-bottom {
+	0% {
+		opacity: 0;
+		transform: translateY(50px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes fade-in {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
 }

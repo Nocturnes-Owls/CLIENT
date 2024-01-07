@@ -1,16 +1,9 @@
 .team-section {
   height: 100%;
   padding-bottom: 4rem;
-  @include mx-response(lg){
-    padding-bottom: 7rem;
-  }
 
   h1 {
     margin-bottom: 2rem;
-    @include mx-response(md) {
-      margin-bottom: 4rem;
-      text-align: center;
-    }
   }
 
   .team-container {
@@ -20,12 +13,46 @@
     gap: 2rem;
     flex-wrap: wrap;
     align-content: center;
+  }
+}
 
-    @include mx-response(md) {
+@include mx-response(md) {
+  .team-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include mx-response(lg) {
+      padding-bottom: 7rem;
+    }
+
+    h1 {
+      position: relative;
+      margin-bottom: 4rem;
+      text-align: center;
+      width: max-content;
+
+      &::before {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        background-color: $primary-color;
+        width: 98%;
+        height: 1.5px;
+        bottom: -0.8rem;
+      }
+    }
+
+    .team-container {
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: space-around;
       align-items: center;
     }
+  }
+}
+
+@include mx-response(lg) {
+  .team-section {
+    padding-bottom: 5rem;
   }
 }

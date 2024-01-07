@@ -6,8 +6,6 @@ const Team = ({ title }) => {
     <section id="team" className="section container team-section">
       <h1 className="title">{title}</h1>
       <div className="container team-container">
-        {/* OPTIMIZAR IMAGENES */}
-
         <Fella
           fella={{
             name: "CRISTIAN BETANCUR",
@@ -18,7 +16,6 @@ const Team = ({ title }) => {
             portfolio: "https://dribbble.com/cristiandbetancurg",
           }}
         />
-
         <Fella
           fella={{
             name: "JOEL LOPEZ",
@@ -29,7 +26,6 @@ const Team = ({ title }) => {
             portfolio: "",
           }}
         />
-
         <Fella
           fella={{
             name: "KENY ESPINOZA",
@@ -40,7 +36,6 @@ const Team = ({ title }) => {
             portfolio: "https://portfolio-kel.vercel.app/",
           }}
         />
-
         <Fella
           fella={{
             name: "JULIAN CASTAÑO",
