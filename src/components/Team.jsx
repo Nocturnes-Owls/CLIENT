@@ -12,7 +12,7 @@ const Team = ({ title }) => {
           fella={{
             name: "CRISTIAN BETANCUR",
             rol: "CEO DE FULGOL, FULLSTACK",
-            img: "cristian.png",
+            img: "cristian.webp",
             linkedIn: "https://www.linkedin.com/in/cristian-betancur-galan-507818176/",
             gitHub: "https://github.com/cristiandbetancurg",
             portfolio: "https://dribbble.com/cristiandbetancurg",
@@ -23,7 +23,7 @@ const Team = ({ title }) => {
           fella={{
             name: "JOEL LOPEZ",
             rol: "FULLSTACK DEVELOPER",
-            img: "joeldefinitive.png",
+            img: "joeldefinitive.webp",
             linkedIn: "https://www.linkedin.com/in/buhonocturno/",
             gitHub: "https://github.com/djoel95",
             portfolio: "",
@@ -34,7 +34,7 @@ const Team = ({ title }) => {
           fella={{
             name: "KENY ESPINOZA",
             rol: "FRONT-END DEVELOPER",
-            img: "lordkeny.png",
+            img: "lordkeny.webp",
             linkedIn: "https://www.linkedin.com/in/keny-espinoza-luis-45b8b5193/",
             gitHub: "https://github.com/KEspinozaLuis",
             portfolio: "https://portfolio-kel.vercel.app/",
@@ -45,7 +45,7 @@ const Team = ({ title }) => {
           fella={{
             name: "JULIAN CASTAÑO",
             rol: "FULLSTACK DEVELOPER",
-            img: "julian.png",
+            img: "julian.webp",
             linkedIn: "https://www.linkedin.com/in/julian-casta%C3%B1o-a-264a89278/",
             gitHub: "https://github.com/hielocuantico",
             portfolio: "",

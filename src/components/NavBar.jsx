@@ -36,10 +36,7 @@ const NavBar = () => {
   return (
     <div className={`navbar-container`}>
       <nav>
-        <menu
-        onMouseOver={handleToggleMenuOn}
-        onMouseOut={handleToggleMenuOff}
-        >
+        <menu onMouseOver={handleToggleMenuOn} onMouseOut={handleToggleMenuOff}>
           <button
             onClick={handleToggleMenuOn}
             className={`menu-btn ${toggleMenu && "menu-btn-on"}`}

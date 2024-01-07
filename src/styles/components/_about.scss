@@ -39,11 +39,14 @@
     .about-media-container {
       display: flex;
       width: 50%;
-      justify-content: baseline;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
 
       .about-media {
         position: relative;
         width: 60%;
+        height: 21rem;
 
         div:nth-child(1),
         div:nth-child(2) {

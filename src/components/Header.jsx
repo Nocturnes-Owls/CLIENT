@@ -12,7 +12,7 @@ const Header = ({ title, text }) => {
         </div>
 
         <div className="image-header">
-          <img src="/owls.png" alt="Five owls rest in the mountain" />
+          <img src="/owls.webp" alt="Five owls rest in the mountain" />
         </div>
       </div>
     </header>
