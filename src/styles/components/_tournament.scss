@@ -90,31 +90,6 @@
     display: none;
 }
 
-/*PRUEBAS*/
-.tournamentTwo{
-    padding: 0;
-    .hackaton-description{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 3rem;
-        .title{
-            font-size: 3rem;
-            padding-top: 0.5rem;
-        }
-    }
-    .hackaton-btn, 
-    .hackaton-sponsor{
-        margin: 1.8rem 0;
-    }
-
-}
-.hackaton-video2{
-    video{
-       width: 100%; 
-    }
-}
-
 @include mx-response(lg){
     .tournament {
         &:before{

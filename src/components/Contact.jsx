@@ -22,8 +22,8 @@ const Contact = ({description}) => {
           <h1 className="title">Contacto</h1>
           <p className="subtitle">{description}</p>
           <SocialNetworks  
-            gmail ="#"
-            facebook = "#"
+            gmail ="thenocturneowls@gmail.com"
+            discord = "https://discord.gg/EBAcH6N9"
             instagram = "https://www.instagram.com/buhos__nocturnos?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
           />
         </div>

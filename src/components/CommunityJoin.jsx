@@ -2,7 +2,7 @@ import Button from "./Button"
 
 const CommunityJoin = ({title, subtitle, image}) => {
   return (
-    <section id="" className="bg-black section comunity">
+    <section id="community" className="bg-black section comunity">
       <div className="container">
         <div>
           <h1 className="title">{title}</h1>

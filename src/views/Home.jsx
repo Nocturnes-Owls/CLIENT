@@ -3,7 +3,6 @@
 // import Contact       from '../views/Contact';
 // import Slider        from '../components/Slider'
 // import Button        from '../components/Button';
-// import TournamentTwo from "../components/TournamentTwo";
 
 import Contact from "../components/Contact";
 import Header from "../components/Header";
@@ -32,7 +31,6 @@ const Home = () => {
           button: "CONTACTANOS",
         }}
       />
-      {/* <TournamentTwo /> */}
       <CommunityJoin
         title="Comunidad"
         subtitle="Si eres un desarrollador de proyectos que busca una comunidad solidaria e inspiradora, te invitamos a unirte a la comunidad de los búhos nocturnos."
