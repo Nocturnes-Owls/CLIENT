@@ -38,16 +38,7 @@
 
       h1 {
         font-size: 1.62rem;
-        position: relative;
-        &::before {
-          content: "";
-          display: inline-block;
-          position: absolute;
-          background-color: $primary-color;
-          width: 98%;
-          height: 1.5px;
-          bottom: -0.8rem;
-        }
+        position: relative;        
       }
 
       p {
