@@ -30,7 +30,7 @@ const Header = ({ title, text }) => {
         <div className="container header-content">
           <div className={`header-text ${ headerIn && "header-text-animation-in"}`}>
             <h1>{title}</h1>
-            <h2>{text}</h2>
+            <h2 className="subtitle">{text}</h2>
           </div>
           <div className={`header-image ${ headerIn && "header-image-animation-in" }`}>
             <img src="/owls.webp" alt="Five owls rest in the mountain" />
