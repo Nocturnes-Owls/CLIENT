@@ -4,7 +4,7 @@ const Tournament = ({title}) => {
     <section id="tournament" className='section tournament'>
       <div className='container'>
         <div className="hackaton-video">
-          <video src="./Hackaton-NocturnesOwls.mp4" type="video/mp4" controls="true" poster="hackatonPoster.webp"></video>
+          <video src="/Hackaton-NocturnesOwls.mp4" type="video/mp4" controls={true} poster="hackatonPoster.webp"></video>
         </div>
         <div className="hackaton-description">
           <div className="hackaton-title">
@@ -15,9 +15,9 @@ const Tournament = ({title}) => {
             <a href="https://drive.google.com/file/d/1pMS7smX9yma_0i_UQql0671A3sSUW86e/view?usp=drive_link" download="Torneo-Nocturne-Owl" className="btn btnPrimary" target="_blank" rel="noopener noreferrer"><span className="btn-text">Más Información</span></a>
           </div>
           <div className="hackaton-sponsor">
-            <a href="#"><img src="./napoleon-chat.png" alt="Napoleon chat" /></a>
-            <a href="#"><img src="./gonden_elf.webp" alt="Golden elf" /></a>
-            <a href="#"><img src="./the-empire.webp" alt="The Empire" /></a>
+            <a href="#"><img src="/napoleon-chat.png" alt="Napoleon chat" /></a>
+            <a href="#"><img src="/gonden_elf.webp" alt="Golden elf" /></a>
+            <a href="#"><img src="/the-empire.webp" alt="The Empire" /></a>
           </div>
         </div>
       </div>
