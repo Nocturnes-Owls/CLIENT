@@ -1,9 +1,3 @@
-// import Resources     from '../views/Resources';
-// import JobOffers     from '../views/JobOffers';
-// import Contact       from '../views/Contact';
-// import Slider        from '../components/Slider'
-// import Button        from '../components/Button';
-
 import Contact from "../components/Contact";
 import Header from "../components/Header";
 import CommunityJoin from "../components/CommunityJoin";
@@ -34,7 +28,7 @@ const Home = () => {
       <CommunityJoin
         title="Comunidad"
         subtitle="Si eres un desarrollador de proyectos que busca una comunidad solidaria e inspiradora, te invitamos a unirte a la comunidad de los búhos nocturnos."
-        image="./comunity.webp"
+        image="./community.png"
       />
       <Tournament title="HACKATON" />
       <Contact

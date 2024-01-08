@@ -19,10 +19,6 @@ h2 {
   font-size: 1.2rem;
 }
 
-p {
-  font-size: 1.08rem;
-}
-
 button {
   cursor: pointer;
 }
@@ -70,6 +66,7 @@ textarea:focus + label,
 .effectLabel {
   font-size: 0.8rem;
   top: 0.5rem;
+  color: $primary-color;
 }
 label {
   position: absolute;
@@ -87,10 +84,6 @@ label {
   h2 {
     font-size: 1.25rem;
   }
-
-  p {
-    font-size: 1rem;
-  }
 }
 
 @include mx-response(lg) {
@@ -103,16 +96,15 @@ label {
   .description {
     font-size: 1.1rem;
   }
+  .subtitle {
+    font-size: 1.2rem;
+  }
   h1 {
     font-size: 2.8rem;
   }
 
   h2 {
     font-size: 1.5rem;
-  }
-
-  p {
-    font-size: 1.2rem;
   }
 }
 
