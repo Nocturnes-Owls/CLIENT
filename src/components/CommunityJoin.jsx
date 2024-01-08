@@ -10,7 +10,7 @@ const CommunityJoin = ({title, subtitle, image}) => {
           <a href="https://discord.gg/EBAcH6N9" target="_blank"><Button label="Unirse"/></a>
         </div>
         <div className="community-image">
-          <img src={image} alt="Comunidad" />
+          <img src={image} alt="Comunidad" className="community-image-principal" />
           <img src="./discord-letra.png" alt="logo discord"  className="logo-discord"/>
         </div>
       </div> 

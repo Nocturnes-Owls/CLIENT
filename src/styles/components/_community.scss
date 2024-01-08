@@ -13,6 +13,9 @@
     max-width: 8rem;
     align-self: flex-end;
 }
+.community-image-principal{
+    filter: saturate(85%);
+}
 
 
 @include mx-response(lg){
@@ -25,7 +28,7 @@
     .community-image{
         max-width: 20rem;
         align-self: flex-start;
-        margin: 2rem 4rem 2rem 0;
+        margin: 3rem 4rem 3rem 0;
         text-align: center;
     }
     .logo-discord{
