@@ -4,7 +4,7 @@ const Tournament = ({title}) => {
     <section id="tournament" className='section tournament'>
       <div className='container'>
         <div className="hackaton-video">
-          <video src="./Hackaton-NocturnesOwls.mp4" type="video/mp4" controls="true" poster="hackatonPoster.webp"></video>
+          <video src="./Hackaton-NocturnesOwls.mp4" type="video/mp4" controls={true} poster="hackatonPoster.webp"></video>
         </div>
         <div className="hackaton-description">
           <div className="hackaton-title">

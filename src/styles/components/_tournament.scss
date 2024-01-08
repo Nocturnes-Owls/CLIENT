@@ -16,7 +16,8 @@
         z-index: -1;
     }
     .container{
-        @include mx-flex()
+        @include mx-flex;
+        gap: 1rem;
     }
 }
 
