@@ -22,15 +22,6 @@
         position: relative;
         margin-bottom: 1.7rem;
         max-width: max-content;
-        &::before {
-          content: "";
-          display: inline-block;
-          position: absolute;
-          background-color: $primary-color;
-          width: 98%;
-          height: 1.5px;
-          bottom: -0.8rem;
-        }
       }
 
       h2 {
