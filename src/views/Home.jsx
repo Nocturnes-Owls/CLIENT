@@ -8,7 +8,7 @@ import Footer from "../components/Footer";
 
 const Home = () => {
   return (
-    <div>
+    <>
       <Header
         title="NOCTURNE OWLS"
         text="Bienvenidos a la comunidad de los búhos nocturnos, una comunidad de desarrolladores de proyectos que se esfuerzan por crear proyectos innovadores y sostenibles."
@@ -36,7 +36,7 @@ const Home = () => {
       />
       <Team title="NUESTRO EQUIPO" />
       <Footer />
-    </div>
+    </>
   );
 };
 
