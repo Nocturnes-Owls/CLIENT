@@ -5,6 +5,18 @@ import Button from "./Button";
 const Header = ({ title, text }) => {
   const [headerIn, setHeaderIn] = useState(false);
 
+  const handleNavToSection = (sectionId) => {
+    const sectionTarget = document.getElementById(sectionId);
+
+    if (sectionTarget) {
+      window.scrollTo({
+        top: sectionTarget.offsetTop,
+      });
+    }
+
+    console.log(`The element ${sectionTarget} is not valid`);
+  };
+
   useEffect(() => {
     
     const observer = new IntersectionObserver((entries) => {
@@ -13,7 +25,7 @@ const Header = ({ title, text }) => {
         setHeaderIn(true)
         observer.unobserve(entry.target)
       }
-      console.log("Element no-visible");
+      // console.log("Element no-visible");
     }, {
       threshold: 0.1,
     });
@@ -32,8 +44,10 @@ const Header = ({ title, text }) => {
           <div className={`header-text ${ headerIn && "header-text-animation-in"}`}>
             <h1>{title}</h1>
             <h2 className="subtitle">{text}</h2>
-            <div>
-              <Button label="AYUDA"/>
+            <div onClick={() => {
+              handleNavToSection("contact")
+            }}>
+              <Button label="CONTACTANOS"/>
             </div>
           </div>
           {/* <div className={`header-image ${ headerIn && "header-image-animation-in" }`}> */}

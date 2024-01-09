@@ -3,7 +3,7 @@
   background-image: url("/fondo-hackaton.webp");
   background-size: 128rem;
   background-repeat: no-repeat;
-  height: 95vh;
+  height: 100vh;
   color: white;
 
   .header-content {
@@ -17,7 +17,7 @@
       font-family: $primary-font;
       max-width: 20rem;
       opacity: 0;
-      margin-top: 8rem;
+      margin-top: 12rem;
 
       h1 {
         margin-bottom: 1.7rem;
@@ -40,10 +40,10 @@
       position: absolute;
       bottom: 0;
       right: 0;
-      max-width: 19rem;
+      max-width: 20rem;
       z-index: -1;
       opacity: 0;
-      margin-bottom: 1rem;
+      margin-bottom: 2rem;
       @include mx-sepia-filter;
       transition: all 1s ease;
     }
@@ -65,9 +65,11 @@
         align-self: center;
         max-width: 30rem;
         margin-top: initial;
+        margin-bottom: 2rem;
       }
       img {
         max-width: 25rem;
+        margin-bottom: 1rem;
       }
     }
   }

@@ -4,17 +4,17 @@ import Button from "./Button";
 const About = ({ text }) => {
   const [aboutIn, setAboutIn] = useState(false);
 
-  const handleNavToSection = (sectionId) => {
-    const sectionTarget = document.getElementById(sectionId);
+  // const handleNavToSection = (sectionId) => {
+  //   const sectionTarget = document.getElementById(sectionId);
 
-    if (sectionTarget) {
-      window.scrollTo({
-        top: sectionTarget.offsetTop,
-      });
-    }
+  //   if (sectionTarget) {
+  //     window.scrollTo({
+  //       top: sectionTarget.offsetTop,
+  //     });
+  //   }
 
-    console.log(`The element ${sectionTarget} is not valid`);
-  };
+  //   console.log(`The element ${sectionTarget} is not valid`);
+  // };
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -24,7 +24,7 @@ const About = ({ text }) => {
           setAboutIn(true);
           observer.unobserve(entry.target);
         }
-        console.log("Element no-visible");
+        // console.log("Element no-visible");
       },
       {
         threshold: 0.1,
@@ -54,14 +54,14 @@ const About = ({ text }) => {
             <p className="subtitle">{text.paragraphs.p1}</p>
             <p className="subtitle">{text.paragraphs.p2}</p>
           </div>
-          <div
+          {/* <div
             className="about-btn"
             onClick={() => {
               handleNavToSection("contact");
             }}
           >
             <Button label="CONTACTANOS" />
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

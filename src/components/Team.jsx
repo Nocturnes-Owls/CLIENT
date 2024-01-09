@@ -12,7 +12,7 @@ const Team = ({ title }) => {
           setTeamIn(true);
           observer.unobserve(entry.target);
         }
-        console.log("Element no-visible");
+        // console.log("Element no-visible");
       },
       {
         threshold: 0.1,
