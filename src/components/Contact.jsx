@@ -5,7 +5,7 @@ import validate from "../utils/validate";
 import axios from 'axios';
 import { modalSuccess, modalError } from "../utils/modal";
 
-const URL_API = "http://localhost:3001";
+const URL_API = "https://nocturneowls.tech";
 
 const Contact = ({description}) => {
   const [form, setForm] = useState({
