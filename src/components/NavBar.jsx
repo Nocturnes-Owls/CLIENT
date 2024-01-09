@@ -71,7 +71,7 @@ const NavBar = () => {
             onClick={() => {
               handleNavToSection("tournament");
             }}
-            className={toggleMenu ? "opt-3" : "opt-hidden"}
+            className={toggleMenu ? "opt-2" : "opt-hidden"}
           >
             <BsTrophyFill />
           </button>
@@ -80,7 +80,7 @@ const NavBar = () => {
             onClick={() => {
               handleNavToSection("contact");
             }}
-            className={toggleMenu ? "opt-2" : "opt-hidden"}
+            className={toggleMenu ? "opt-3" : "opt-hidden"}
           >
             <BsFillPeopleFill />
           </button>
