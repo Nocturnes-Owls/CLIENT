@@ -69,20 +69,20 @@ const NavBar = () => {
 
           <button
             onClick={() => {
-              handleNavToSection("about");
-            }}
-            className={toggleMenu ? "opt-2" : "opt-hidden"}
-          >
-            <BsFillPeopleFill />
-          </button>
-
-          <button
-            onClick={() => {
               handleNavToSection("tournament");
             }}
             className={toggleMenu ? "opt-3" : "opt-hidden"}
           >
             <BsTrophyFill />
+          </button>
+          
+          <button
+            onClick={() => {
+              handleNavToSection("contact");
+            }}
+            className={toggleMenu ? "opt-2" : "opt-hidden"}
+          >
+            <BsFillPeopleFill />
           </button>
 
           <button

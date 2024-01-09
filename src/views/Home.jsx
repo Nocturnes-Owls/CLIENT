@@ -10,7 +10,7 @@ const Home = () => {
   return (
     <>
       <Header
-        title="NOCTURNE OWLS"
+        title="BUHOS NOCTURNOS"
         text="Bienvenidos a la comunidad de los búhos nocturnos, una comunidad de desarrolladores de proyectos que se esfuerzan por crear proyectos innovadores y sostenibles."
       />
 

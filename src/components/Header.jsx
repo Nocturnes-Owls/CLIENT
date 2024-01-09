@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import NavBar from "../components/NavBar";
+import Button from "./Button";
 
 const Header = ({ title, text }) => {
   const [headerIn, setHeaderIn] = useState(false);
@@ -31,6 +32,9 @@ const Header = ({ title, text }) => {
           <div className={`header-text ${ headerIn && "header-text-animation-in"}`}>
             <h1>{title}</h1>
             <h2 className="subtitle">{text}</h2>
+            <div>
+              <Button label="AYUDA"/>
+            </div>
           </div>
           {/* <div className={`header-image ${ headerIn && "header-image-animation-in" }`}> */}
             <img className={`${ headerIn && "header-image-animation-in"}`} src="/owls.webp" alt="Five owls rest in the mountain" />
