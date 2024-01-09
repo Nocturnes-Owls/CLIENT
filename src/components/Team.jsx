@@ -15,7 +15,7 @@ const Team = ({ title }) => {
         console.log("Element no-visible");
       },
       {
-        threshold: 0.7,
+        threshold: 0.1,
       }
     );
 

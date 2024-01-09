@@ -27,7 +27,7 @@ const About = ({ text }) => {
         console.log("Element no-visible");
       },
       {
-        threshold: 1,
+        threshold: 0.1,
       }
     );
 

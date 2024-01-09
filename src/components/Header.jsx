@@ -14,7 +14,7 @@ const Header = ({ title, text }) => {
       }
       console.log("Element no-visible");
     }, {
-      threshold: 0,
+      threshold: 0.1,
     });
     
     const headerSection = document.getElementById("header");
