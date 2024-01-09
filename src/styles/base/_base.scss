@@ -1,27 +1,3 @@
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  background: $secondary-color;
-}
-
-img {
-  width: 100%;
-}
-
-h1 {
-  font-size: 1.7rem;
-  line-height: 1.3;
-}
-
-h2 {
-  font-size: 1.2rem;
-}
-
-button {
-  cursor: pointer;
-}
 
 .container {
   width: 90%;
@@ -79,15 +55,13 @@ label {
   transition: 0.3s all;
 }
 
-@include mx-response(md) {
-  h1 {
-    font-size: 2.6rem;
-    font-weight: 0;
-  }
-
-  h2 {
-    font-size: 1.25rem;
-  }
+//Modales
+.modal-title{
+  font-family: $primary-font;
+  font-size: 2.2rem;
+}
+.modal-subtitle{
+  font-family: $secondary-font;
 }
 
 @include mx-response(lg) {
@@ -105,13 +79,6 @@ label {
   }
   .subtitle {
     font-size: 1.2rem;
-  }
-  h1 {
-    font-size: 2.8rem;
-  }
-
-  h2 {
-    font-size: 1.5rem;
   }
 }
 

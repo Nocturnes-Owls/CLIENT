@@ -20,11 +20,13 @@
         gap: 1rem;
     }
 }
-
+.hackaton-video,
+.hackaton-description{
+    @include mx-visibility(hidden);
+}
 .hackaton-video video{
     width: 100%;
-}
-
+} 
 .hackaton-title{
     text-align: center;
     margin: 2.5rem 0;
@@ -89,6 +91,17 @@
 
 .hackaton-social{
     display: none;
+}
+
+.animation {
+    .hackaton-video{
+        @include mx-visibility(visible); 
+        @include mx-animation($initial: fade-in-left);
+    }
+    .hackaton-description{
+        @include mx-visibility(visible);
+        @include mx-animation($initial: fade-in-right);
+    }
 }
 
 @include mx-response(lg){

@@ -1,13 +1,19 @@
 import Button from "./Button";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import SocialNetworks from "./SocialNetworks";
 import validate from "../utils/validate";
 import axios from 'axios';
 import { modalSuccess, modalError } from "../utils/modal";
+import { observer } from "../utils/animationScroll";
 
 const URL_API = "http://localhost:3001";
 
 const Contact = ({description}) => {
+  useEffect(()=> {
+    const contact = document.getElementById('contact')
+    observer.observe(contact);
+  }, [])
+
   const [form, setForm] = useState({
     name: "",
     email: "",

@@ -1,5 +1,12 @@
+import { useEffect } from "react";
+import { observer } from "../utils/animationScroll";
 
 const Tournament = ({title}) => {
+  useEffect(()=> {
+    const tournament = document.getElementById('tournament')
+    observer.observe(tournament);
+  }, [])
+
   return (
     <section id="tournament" className='section tournament'>
       <div className='container'>

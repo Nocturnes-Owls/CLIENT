@@ -23,6 +23,7 @@
 .contact-info,
 .contact-form{
     position: relative;
+    @include mx-visibility(hidden);
 }
 .contact-form{
     margin-top: 2rem;
@@ -45,6 +46,17 @@
     font-size: 0.8rem;
     text-align: right;
     color: $primary-color;
+}
+
+.animation {
+    .contact-info{
+        @include mx-visibility(visible); 
+        @include mx-animation($initial: fade-in-left);
+    }
+    .contact-form{
+        @include mx-visibility(visible);
+        @include mx-animation($initial: fade-in-bottom);
+    }
 }
 
 @include mx-response(lg){
