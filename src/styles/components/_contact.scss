@@ -6,6 +6,7 @@
     background-position: center;
     background-attachment: fixed;
     position: relative;
+    clip-path: polygon(100% 0, 400% 59%, 15% 100%, 0 95%, 0 0);
     &::before{
         content: "";
         width: 100%;
