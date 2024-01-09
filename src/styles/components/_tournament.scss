@@ -102,10 +102,7 @@
         }
     }
     .hackaton-video{
-        max-width: 40rem;
-    }
-    .hackaton-description{
-        padding-right: 3rem;
+        max-width: 42rem;
     }
     .hackaton-title .title{
         font-size: 4.5rem;
@@ -130,4 +127,11 @@
             }
         }
     }
+}
+
+@include mx-response(lg){
+    .hackaton-description{
+        padding-right: 3rem;
+    }
+    
 }

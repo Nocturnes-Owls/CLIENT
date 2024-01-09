@@ -10,13 +10,17 @@
     }
 }
 .community-image{
-    max-width: 8rem;
-    align-self: flex-end;
+    max-width: 20rem;
+    margin: 4rem 0 2rem 0;
+    text-align: center;
 }
 .community-image-principal{
     filter: saturate(85%);
 }
-
+.logo-discord{
+    margin-top: 1rem;
+    max-width: 10rem;
+}
 
 @include mx-response(lg){
     .comunity{
@@ -26,13 +30,7 @@
         }
     }
     .community-image{
-        max-width: 20rem;
-        align-self: flex-start;
-        margin: 3rem 4rem 3rem 0;
-        text-align: center;
+        margin-right: 4rem;
     }
-    .logo-discord{
-        margin-top: 1rem;
-        max-width: 10rem;
-    }
+    
 }
