@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import {
   BsList,
-  BsDiscord,
+  // BsDiscord,
   BsTrophyFill,
   BsFillHouseDoorFill,
   BsFillPeopleFill,
@@ -10,13 +10,10 @@ import { GiOwl } from "react-icons/gi";
 
 const NavBar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
+  const menuRef = useRef(null);
 
-  const handleToggleMenuOn = () => {
-    setToggleMenu(true);
-  };
-
-  const handleToggleMenuOff = () => {
-    setToggleMenu(false);
+  const handleToggleMenu = () => {
+    setToggleMenu(!toggleMenu);
   };
 
   const handleNavToSection = (sectionId) => {
@@ -31,14 +28,25 @@ const NavBar = () => {
     console.log(`The element ${sectionTarget} is not valid`);
   };
 
-  useEffect(() => {}, []);
+  const handleClickOutMenu = ( event ) => {
+    if( menuRef.current && !menuRef.current.contains( event.target )) {
+      setToggleMenu( false );
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener( "click", handleClickOutMenu )
+    return () => {
+      document.removeEventListener( "click", handleClickOutMenu )
+    }
+  }, []);
 
   return (
     <div className={`navbar-container`}>
       <nav>
-        <menu onMouseOver={handleToggleMenuOn} onMouseOut={handleToggleMenuOff}>
+        <menu id="header-menu" ref={ menuRef }>
           <button
-            onClick={handleToggleMenuOn}
+            onClick={handleToggleMenu}
             className={`menu-btn ${toggleMenu && "menu-btn-on"}`}
           >
             <BsList />
@@ -57,7 +65,6 @@ const NavBar = () => {
             className={toggleMenu ? "opt-1" : "opt-hidden"}
           >
             <BsFillHouseDoorFill />
-            {/* <p>Home</p> */}
           </button>
 
           <button
@@ -67,7 +74,6 @@ const NavBar = () => {
             className={toggleMenu ? "opt-2" : "opt-hidden"}
           >
             <BsFillPeopleFill />
-            {/* <p>About</p> */}
           </button>
 
           <button
@@ -77,7 +83,6 @@ const NavBar = () => {
             className={toggleMenu ? "opt-3" : "opt-hidden"}
           >
             <BsTrophyFill />
-            {/* <p>Tournament</p> */}
           </button>
 
           <button
@@ -87,7 +92,6 @@ const NavBar = () => {
             className={toggleMenu ? "opt-4" : "opt-hidden"}
           >
             <GiOwl />
-            {/* <p>Team</p> */}
           </button>
         </menu>
       </nav>

@@ -1,25 +1,25 @@
 .header-container {
   clip-path: polygon(100% 0, 218% 59%, 77% 96%, 0 90%, 0 0);
   background-image: url("/fondo-hackaton.webp");
-  background-size: cover;
-  height: 36.5rem;
-  position: relative;
+  background-size: 128rem;
+  background-repeat: no-repeat;
+  height: 95vh;
   color: white;
 
   .header-content {
+    position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: end;
-    gap: 0.5rem;
+    justify-content: baseline;
     height: 100%;
 
     .header-text {
       font-family: $primary-font;
       max-width: 20rem;
       opacity: 0;
+      margin-top: 8rem;
 
       h1 {
-        position: relative;
         margin-bottom: 1.7rem;
         max-width: max-content;
       }
@@ -32,18 +32,16 @@
     .header-text-animation-in {
       animation: fade-in-left 1s ease 1s normal forwards;
     }
-
-    .header-image {
-      align-self: end;
+    img {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      max-width: 19rem;
+      z-index: -1;
       opacity: 0;
-
-      img {
-        max-width: 17.5rem;
-        bottom: 1.3rem;
-        right: 0;
-        z-index: 1;
-        @include mx-sepia-filter;
-      }
+      margin-bottom: 1rem;
+      @include mx-sepia-filter;
+      transition: all 1s ease;
     }
 
     .header-image-animation-in {
@@ -61,15 +59,11 @@
 
       .header-text {
         align-self: center;
-        margin-bottom: 3rem;
         max-width: 30rem;
-        top: 5rem;
+        margin-top: initial;
       }
-
-      .header-image {
-        img {
-          max-width: 19.3rem;
-        }
+      img {
+        max-width: 25rem;
       }
     }
   }
@@ -81,11 +75,8 @@
       .header-text {
         max-width: 43rem;
       }
-
-      .header-image {
-        img {
-          max-width: 25rem;
-        }
+      img {
+        max-width: 39rem;
       }
     }
   }

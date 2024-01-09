@@ -14,7 +14,7 @@ const Header = ({ title, text }) => {
       }
       console.log("Element no-visible");
     }, {
-      threshold: 0.8,
+      threshold: 0,
     });
     
     const headerSection = document.getElementById("header");
@@ -32,9 +32,9 @@ const Header = ({ title, text }) => {
             <h1>{title}</h1>
             <h2 className="subtitle">{text}</h2>
           </div>
-          <div className={`header-image ${ headerIn && "header-image-animation-in" }`}>
-            <img src="/owls.webp" alt="Five owls rest in the mountain" />
-          </div>
+          {/* <div className={`header-image ${ headerIn && "header-image-animation-in" }`}> */}
+            <img className={`${ headerIn && "header-image-animation-in"}`} src="/owls.webp" alt="Five owls rest in the mountain" />
+          {/* </div> */}
         </div>
       </header>
     </>
