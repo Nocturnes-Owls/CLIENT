@@ -1,0 +1,95 @@
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.bg-black {
+  background-color: $black;
+}
+
+.section {
+  padding: 3rem 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.title {
+  font-family: $primary-font;
+  color: $white;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  font-size: 2.2rem;
+}
+
+.subtitle {
+  font-family: $secondary-font;
+  font-weight: 300;
+  color: $lightGray;
+  margin-bottom: 1rem;
+}
+
+input,
+textarea {
+  background-color: transparent;
+  border: 1px solid $lightGray;
+  padding: 1.5rem 0.8rem 0.5rem;
+  border-radius: 0.2rem;
+  width: 100%;
+  color: #fff;
+  font-family: $secondary-font;
+}
+
+input:focus + label,
+textarea:focus + label,
+.effectLabel {
+  font-size: 0.8rem;
+  top: 0.5rem;
+  color: $primary-color;
+}
+label {
+  position: absolute;
+  left: 0.8rem;
+  top: 1rem;
+  transition: 0.3s all;
+}
+
+//Modales
+.modal-title{
+  font-family: $primary-font;
+  font-size: 2.2rem;
+}
+.modal-subtitle{
+  font-family: $secondary-font;
+}
+
+@include mx-response(lg) {
+  .container {
+    width: 1000px;
+  }
+  .flex {
+    flex-direction: row;
+  }
+  .description {
+    font-size: 1.1rem;
+  }
+  .title {
+    font-size: 2.7rem;
+  }
+  .subtitle {
+    font-size: 1.2rem;
+  }
+}
+
+@include mx-response(xl) {
+  .container {
+    width: 1200px;
+  }
+  .section {
+    padding: 3.5rem 0;
+  }
+  .title {
+    font-size: 3rem;
+  }
+}

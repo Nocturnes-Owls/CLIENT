@@ -6,32 +6,65 @@
   large desktop -->  ( 1200px - +)
 */
 
-@mixin mx-response($breakpoint){
-    @if $breakpoint == sm {
-        @media screen and (min-width: 640px){
-            @content;
-        }
+@mixin mx-response($breakpoint) {
+  @if $breakpoint == sm {
+    @media screen and (min-width: 640px) {
+      @content;
     }
-    @if $breakpoint == md {
-        @media screen and (min-width: 768px){
-            @content;
-        }
+  }
+  @if $breakpoint == md {
+    @media screen and (min-width: 768px) {
+      @content;
     }
-    @if $breakpoint == lg {
-        @media screen and (min-width: 992px){
-            @content;
-        }
+  }
+  @if $breakpoint == lg {
+    @media screen and (min-width: 992px) {
+      @content;
     }
-    @if $breakpoint == xl {
-        @media screen and (min-width: 1200px){
-            @content;
-        }
+  }
+  @if $breakpoint == xl {
+    @media screen and (min-width: 1200px) {
+      @content;
     }
+  }
 }
 
-@mixin mx-flex($justify: center, $align: center, $direction: row){
-    display: flex;
-    justify-content: $justify;
-    align-items: $align;
-    flex-direction: $direction;
+@mixin mx-flex($justify: center, $align: center, $direction: column) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+
+@mixin mx-margin-mobile($leftValue: 1.5rem, $rightValue: 1.5rem) {
+  margin-left: $leftValue;
+  margin-right: $rightValue;
+}
+
+@mixin mx-blur-filter($value: 10px) {
+  backdrop-filter: blur($value);
+}
+
+@mixin mx-sepia-filter($brightness: 0.9, $contrast: 1.04, $sepia: 0.2) {
+  filter: brightness($brightness) contrast($contrast) sepia($sepia);
+}
+
+
+@mixin mx-width-heigth-simetric ($value) {
+  width: $value;
+  height: $value;
+}
+
+@mixin mx-visibility($visible){
+  @if $visible == hidden {
+    visibility: hidden;
+    opacity: 0;
+  }
+  @if $visible == visible{
+    visibility: visible;
+  }
+}
+
+@mixin mx-animation($initial: fade-in){
+  animation: $initial 1s ease 0.3s 1 forwards;
 }

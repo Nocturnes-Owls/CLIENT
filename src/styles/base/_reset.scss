@@ -1,15 +1,72 @@
-*, *::after, *::before{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    list-style: none;
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
 }
 
-*:focus{
-    outline: none;
+*:focus {
+  outline: none;
+}
+html {
+  scroll-behavior: smooth;
 }
 
-img{
-    width: 100%;
+body {
+  background: $secondary-color;
+  //Scroll
+  scrollbar-color: $gray $black;
+  &::-webkit-scrollbar {
+      width: 0.5rem; 
+  }
+
+  &::-webkit-scrollbar-track {
+      background: $secondary-color;
+  }
+  &::-webkit-scrollbar-thumb {
+      background: $gray;
+      border-radius: 0.5rem;
+      
+  }
+}
+
+img {
+  width: 100%;
+}
+
+h1 {
+  font-size: 1.7rem;
+  line-height: 1.3;
+}
+
+h2 {
+  font-size: 1.2rem;
+}
+
+button {
+  cursor: pointer;
+}
+
+@include mx-response(md) {
+  h1 {
+    font-size: 2.6rem;
+    font-weight: 0;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+}
+
+@include mx-response(lg) {
+  h1 {
+    font-size: 2.8rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
 }

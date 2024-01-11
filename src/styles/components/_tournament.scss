@@ -1,0 +1,151 @@
+.tournament{
+    position: relative;
+    border-top: 0.3rem solid $lightGray;
+    border-bottom: 0.3rem solid $lightGray;
+    &::before{
+        content: "";
+        display: block;
+        background-image: url('/fondo-hackaton.webp');
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100%;
+        width: 100%;
+        transform: rotate(180deg);
+        position: absolute;
+        top: 0;
+        z-index: -1;
+    }
+    .container{
+        @include mx-flex;
+        gap: 1rem;
+    }
+}
+.hackaton-video,
+.hackaton-description{
+    @include mx-visibility(hidden);
+}
+.hackaton-video video{
+    width: 100%;
+} 
+.hackaton-title{
+    text-align: center;
+    margin: 2.5rem 0;
+    .title{
+        font-size: 3.5rem;
+        font-weight: 900;
+    }
+}
+
+.award{
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+}
+.awards-title{
+    font-size: 1.5rem;
+    color: $white;
+    font-family: $secondary-font;
+    margin-bottom: 1.5rem;
+}
+.award-icon{
+    background-color: $black;
+    box-shadow: 0 0 0.4rem rgba($primary-color, .9);
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    svg{
+        color: $primary-color;
+        font-size: 1.1rem;
+    }
+}
+.award-text{
+    color: $white;
+    font-size: 1.2rem;
+    font-family: $secondary-font;
+}
+
+.hackaton-btn{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2.5rem 0;
+    font-size: 1.2rem;
+    .btnPrimary{
+        border-width: 2px;
+    } 
+}
+
+.hackaton-sponsor{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 4rem 0;
+    img{
+        max-width: 6rem;
+    }
+}
+
+.hackaton-social{
+    display: none;
+}
+
+.animation {
+    .hackaton-video{
+        @include mx-visibility(visible); 
+        @include mx-animation($initial: fade-in-left);
+    }
+    .hackaton-description{
+        @include mx-visibility(visible);
+        @include mx-animation($initial: fade-in-right);
+    }
+}
+
+@include mx-response(lg){
+    .tournament {
+        &:before{
+            transform: initial;
+        }
+        .container{
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+    .hackaton-video{
+        max-width: 42rem;
+    }
+    .hackaton-title .title{
+        font-size: 4.5rem;
+    }
+    .awards-title{
+        font-size: 1.8rem;
+    }
+    .award-text{
+        font-size: 1.5rem;
+    }
+
+    .hackaton-social{
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+        padding-top: 2.5rem;
+        svg{
+            font-size: 1.2rem;
+            color: $white;
+            &:hover{
+                color: $black;
+            }
+        }
+    }
+}
+
+@include mx-response(lg){
+    .hackaton-description{
+        padding-right: 2rem;
+    }
+    
+}

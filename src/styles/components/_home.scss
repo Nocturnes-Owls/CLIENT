@@ -1,0 +1,11 @@
+.flag {
+  width: 70px;
+  height: 130px;
+  background-color: $primary-color;
+  position: fixed;
+  left: 1.5rem;
+  z-index: 100;
+  box-shadow: 0px 1px 10px rgba($secondary-color, .6);
+  clip-path: polygon(0 0, 100% 0%, 100% 96%, 50% 75%, 0 96%);
+  
+}

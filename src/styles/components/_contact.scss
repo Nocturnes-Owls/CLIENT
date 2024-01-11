@@ -1,0 +1,80 @@
+.contact{
+    padding: 6rem 0;
+    background-image: url('/owl-contact.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    clip-path: polygon(100% 0, 400% 59%, 15% 100%, 0 95%, 0 0);
+    &::before{
+        content: "";
+        width: 100%;
+        height: 100%;
+        background-color: rgba($black, .75);
+        position: absolute;
+        top: 0;
+        z-index: 0;
+    }
+    .social-networks{
+        display: none;
+    }
+}
+.contact-info,
+.contact-form{
+    position: relative;
+    @include mx-visibility(hidden);
+}
+.contact-form{
+    margin-top: 2rem;
+}
+.content-input{
+    margin-bottom: 1rem;
+}
+.input-label{
+    position: relative;
+    color: $lightGray;
+}
+.text-area{
+    height: 10rem;
+    resize: none;
+}
+
+.messageError{
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    text-align: right;
+    color: $primary-color;
+}
+
+.animation {
+    .contact-info{
+        @include mx-visibility(visible); 
+        @include mx-animation($initial: fade-in-left);
+    }
+    .contact-form{
+        @include mx-visibility(visible);
+        @include mx-animation($initial: fade-in-bottom);
+    }
+}
+
+@include mx-response(lg){
+    .contact{
+        .container{
+            @include mx-flex($direction:row);
+            gap: 6rem;
+        }
+        .subtitle{
+            max-width: 30rem;
+        }
+        .social-networks{
+            display: flex;
+            margin-top: 2rem;
+        }
+    } 
+    .contact-form{
+        width: 100%;
+        max-width: 30rem;
+    }
+}
