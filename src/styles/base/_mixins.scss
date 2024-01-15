@@ -54,3 +54,17 @@
   width: $value;
   height: $value;
 }
+
+@mixin mx-visibility($visible){
+  @if $visible == hidden {
+    visibility: hidden;
+    opacity: 0;
+  }
+  @if $visible == visible{
+    visibility: visible;
+  }
+}
+
+@mixin mx-animation($initial: fade-in){
+  animation: $initial 1s ease 0.3s 1 forwards;
+}

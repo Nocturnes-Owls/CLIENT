@@ -20,11 +20,13 @@
         gap: 1rem;
     }
 }
-
+.hackaton-video,
+.hackaton-description{
+    @include mx-visibility(hidden);
+}
 .hackaton-video video{
     width: 100%;
-}
-
+} 
 .hackaton-title{
     text-align: center;
     margin: 2.5rem 0;
@@ -69,6 +71,7 @@
 
 .hackaton-btn{
     display: flex;
+    justify-content: center;
     gap: 2rem;
     margin: 2.5rem 0;
     font-size: 1.2rem;
@@ -80,15 +83,26 @@
 .hackaton-sponsor{
     display: flex;
     justify-content: center;
-    gap: 1.5rem;
-    margin: 3rem 0 4rem;
+    gap: 1rem;
+    margin: 4rem 0;
     img{
-        max-width: 7rem;
+        max-width: 6rem;
     }
 }
 
 .hackaton-social{
     display: none;
+}
+
+.animation {
+    .hackaton-video{
+        @include mx-visibility(visible); 
+        @include mx-animation($initial: fade-in-left);
+    }
+    .hackaton-description{
+        @include mx-visibility(visible);
+        @include mx-animation($initial: fade-in-right);
+    }
 }
 
 @include mx-response(lg){
@@ -131,7 +145,7 @@
 
 @include mx-response(lg){
     .hackaton-description{
-        padding-right: 3rem;
+        padding-right: 2rem;
     }
     
 }

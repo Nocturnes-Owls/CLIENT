@@ -2,10 +2,9 @@ import Swal from 'sweetalert2'
 
 export const modalSuccess = () => {
     Swal.fire({
-      title: "Datos enviados",
+      title: '<h2 class="modal-title">Datos enviados</h2>',
       html: `<div style="margin:0.5rem 0">
-                <p>Gracias por contactarnos.</p>
-                <p>En la brevedad nos pondremos en contacto contigo.</p>
+                <p class="modal-subtitle">Gracias por contactarnos.</br> En la brevedad nos pondremos en contacto contigo.</p>
             </div>`,
       showConfirmButton: false,
       showCloseButton: true,
@@ -14,8 +13,11 @@ export const modalSuccess = () => {
   
 export const modalError = () => {
     Swal.fire({
-      title: "Lo siento",
-      text: "Estamos teniendo un problema",
-      confirmButtonText: "Cerrar",
+      title: '<h2 class="modal-title">Lo siento</h2>',
+      html: `<div style="margin:0.5rem 0">
+                <p class="modal-subtitle">Estamos teniendo un problema</p>
+            </div>`,
+      showConfirmButton: false,
+      showCloseButton: true,
     });
   };

@@ -1,6 +1,14 @@
-import Button from "./Button"
+import { useEffect} from "react"
+import Button from "./Button";
+import { observer } from "../utils/animationScroll";
 
 const CommunityJoin = ({title, subtitle, image}) => {
+  
+  useEffect(()=> {
+    const community = document.getElementById('community')
+    observer.observe(community);
+  }, [])
+
   return (
     <section id="community" className="bg-black section comunity">
       <div className="container">

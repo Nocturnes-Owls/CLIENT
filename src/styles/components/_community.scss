@@ -9,6 +9,10 @@
         margin-top: 2rem;
     }
 }
+.community-description,
+.community-image{
+    @include mx-visibility(hidden);
+}
 .community-image{
     max-width: 20rem;
     margin: 4rem 0 2rem 0;
@@ -20,6 +24,17 @@
 .logo-discord{
     margin-top: 1rem;
     max-width: 10rem;
+}
+
+.animation {
+    .community-description{
+        @include mx-visibility(visible); 
+        @include mx-animation($initial: fade-in-left);
+    }
+    .community-image{
+        @include mx-visibility(visible);
+        @include mx-animation($initial: fade-in-right);
+    }
 }
 
 @include mx-response(lg){
