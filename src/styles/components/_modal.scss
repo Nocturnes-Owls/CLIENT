@@ -1,0 +1,55 @@
+.container-modal{
+    background-color: rgba($secondary-color, .8);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    z-index: 100;
+    display: none;
+}
+
+.content-modal {
+    background-color: $white;
+    padding: 2rem 1.5rem;
+    border-radius: 0.5rem;
+    max-width: 90%;
+    position: relative;
+    @include mx-visibility(hidden);
+}
+.open {
+    &.container-modal{
+        display: grid;
+        place-items: center;
+    }
+    .content-modal{
+        @include mx-visibility(visible);
+        @include mx-animation(fade-in-top);
+    }
+} 
+.header-modal{
+    margin: 0.5rem 0 2rem;
+    text-align: center;
+}
+
+.close-modal{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    svg{
+        color: $danger;
+        font-size: 1.2rem
+    }
+} 
+.body-modal{
+    display: grid;
+    gap: 1rem;
+}
+
+
+@include mx-response(lg){
+    .body-modal{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

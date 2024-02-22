@@ -1,0 +1,39 @@
+//Winner Modal
+.winner{
+    padding: 1.5rem 1rem;
+    border: 0.1rem solid $primary-color;
+    width: 100%;
+    @include mx-flex($direction: row, $justify: flex-start);
+    gap: 0.5rem;
+    .subtitle{
+        color: $black;
+    }
+}
+
+.winner-top{
+    position: relative;
+    .top{
+        position: absolute;
+        top: 0.5rem;
+        right: 1.3rem;
+        color: $white;
+    }
+    svg{
+        color: $primary-color;
+        font-size: 3rem;
+    }
+    
+}
+.winner-team{
+    font-family: $primary-font;
+    font-size: 1.5rem;
+}
+
+.winner-social{
+    a{
+        color: $black;
+        display: inline-block;
+        margin: 0.2rem 0.5rem 0 0;
+        cursor: pointer;
+    }
+}
